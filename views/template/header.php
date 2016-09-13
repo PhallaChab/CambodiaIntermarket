@@ -4,21 +4,21 @@
 	<title>Cambodia Intermarket</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="../css/form.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="resources/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="resources/css/form.css" rel="stylesheet" type="text/css" media="all" />
 	<link href='http://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="../js/jquery1.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery1.min.js"></script>
 	<!-- start menu -->
-	<link href="../css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
-	<script type="text/javascript" src="../js/megamenu.js"></script>
+	<link href="resources/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="text/javascript" src="resources/js/megamenu.js"></script>
 	<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 	<!--start slider -->
-	    <link rel="stylesheet" href="../css/fwslider.css" media="all">
-	    <script src="../js/jquery-ui.min.js"></script>
-	    <script src="../js/css3-mediaqueries.js"></script>
-	    <script src="../js/fwslider.js"></script>
+	    <link rel="stylesheet" href="resources/css/fwslider.css" media="all">
+	    <script src="resources/js/jquery-ui.min.js"></script>
+	    <script src="resources/js/css3-mediaqueries.js"></script>
+	    <script src="resources/js/fwslider.js"></script>
 	<!--end slider -->
-	<script src="../js/jquery.easydropdown.js"></script>
+	<script src="resources/js/jquery.easydropdown.js"></script>
 </head>
 <div class="header-top">
 	   <div class="wrap"> 
@@ -46,7 +46,7 @@
 	    <div class="wrap">
 			<div class="header-bottom-left">
 				<div class="logo">
-					<a href="index.php"><img src="../images/logo.jpg" alt=""/></a>
+					<a href="index.php"><img src="resources/images/logo.jpg" alt=""/></a>
 				</div>
 				<div class="menu">
 	            <ul class="megamenu skyblue">
@@ -99,12 +99,20 @@
 			</ul>
 			</div>
 		</div>
+		<?php
+			if(!isset($_POST['search'])){
+			    $searchname = "";
+			} else {
+			    $searchname = $_POST['search'];
+			}  
+		?>
 	   	<div class="header-bottom-right">
-         	<div class="search">	  
-				<input type="text" name="s" class="textbox" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-				<input type="submit" value="Subscribe" id="submit" name="submit">
-				<!-- <span class="glyphicon glyphicon-search" aria-hidden="true"></span> -->
-				<div id="response"> </div>
+         	<div class="search">	
+	         	<form method="post" action="search.php"  id="searchform">  
+					<input type="text" name="search" class="textbox" placeholder="Search" value="<?= $searchname ?>">
+					<input type="submit" value="Subscribe" id="submit" name="submit">
+					<div id="response"> </div>
+				</form>
 		 	</div>
    		 </div>
      <div class="clear"></div>

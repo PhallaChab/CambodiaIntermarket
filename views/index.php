@@ -1,11 +1,11 @@
 <?php
-    include ('../template/header.php');
+    include ('template/header.php');
     include ('../include/functions.php');
 ?>
 <div id="fwslider">
     <div class="slider_container">
         <div class="slide">
-            <img src="../images/banner.jpg" alt=""/>
+            <img src="resources/images/banner.jpg" alt=""/>
             <div class="slide_content">
                 <div class="slide_content_wrap">
                     <h4 class="title">Aluminium Club</h4>
@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="slide">
-            <img src="../images/banner1.png" alt=""/>
+            <img src="resources/images/banner1.png" alt=""/>
             <div class="slide_content">
                 <div class="slide_content_wrap">
                     <h4 class="title">consectetuer adipiscing </h4>
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="slide">
-            <img src="../images/banner2.png" alt=""/>
+            <img src="resources/images/banner2.png" alt=""/>
             <div class="slide_content">
                 <div class="slide_content_wrap">
                     <h4 class="title">Hello world</h4>
@@ -49,7 +49,7 @@
 							 		<a href='single.html'>
 									<div class='inner_content clearfix'>
 										<div class='product_image'>
-											<img src='../".$pro['pro_image']."' alt=''/>
+											<img src='resources/".$pro['pro_image']."' alt=''/>
 										</div>
 										<div class='sale-box1'>
 											<span class='on_sale title_shop'>New</span>
@@ -74,9 +74,9 @@
 			<div class='rsidebar span_1_of_left'>
 				<div class='top-border'> </div>
 				<div class='border'>
-	             	<link href='../css/default.css' rel='stylesheet' type='text/css' media='all' />
-	             	<link href='../css/nivo-slider.css' rel='stylesheet' type='text/css' media='all' />
-				  	<script src='../js/jquery.nivo.slider.js'></script>
+	             	<link href='resources/css/default.css' rel='stylesheet' type='text/css' media='all' />
+	             	<link href='resources/css/nivo-slider.css' rel='stylesheet' type='text/css' media='all' />
+				  	<script src='resources/js/jquery.nivo.slider.js'></script>
 				    <script type='text/javascript'>
 					    $(window).load(function() {
 					        $('#slider').nivoSlider();
@@ -84,9 +84,9 @@
 					</script>
 				    <div class='slider-wrapper theme-default'>
 		              	<div id='slider' class='nivoSlider'>
-			                <img src='../images/pic.jpg' alt='' />
-			               	<img src='../images/pic1.jpg' alt='' />
-			                <img src='../images/pic2.jpg' alt='' />
+			                <img src='resources/images/pic.jpg' alt='' />
+			               	<img src='resources/images/pic1.jpg' alt='' />
+			                <img src='resources/images/pic2.jpg' alt='' />
 		              	</div>
 		            </div>
 	              	<!-- <div class='btn'>
@@ -110,5 +110,5 @@
 	</div>
 </div>
 <?php
-	include ('../template/footer.php');
+	include ('template/footer.php');
 ?>

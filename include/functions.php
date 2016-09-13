@@ -23,10 +23,18 @@
 	function getProducts(){
 		return runQuery("select * from products");
 	}
+
+	function getSearch($result){
+		$rows =  runQuery("select * from products where pro_name LIKE '%".$result."%' or pro_price LIKE '%".$result."%'");
+		if(@mysqli_num_rows($rows)>0){
+			return $rows;
+		}else{
+			return "No";
+		}
+	}
 	//fucntion delete category by id
 	function deleteCagetories($id){
 		return runNonQuery("delete from category where catid=".$id);
-		
 	}
 	
 

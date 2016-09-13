@@ -1,43 +1,43 @@
 <?php
-include ('../template/header.php');
-include ('../include/functions.php');
+	//header("Content-type: text/html; charset=utf-8");
+	$db = mysqli_connect("localhost","root","","cim");
+	mysqli_query ($db,"set character_set_results='utf8'");
+	//mysqli_query("SET NAMES 'UTF8'",$db);
+	include ('define_lang.php');
 ?>
-<div class="container" style="margin-top:50px">
-	<div class="row">
-		<div class="col-sm-3">
-			<h3>Menu </h3>
-		</div>
-		<div class="col-sm-9">
-			<h3>View category</h3>
-			<?php
-				$category = getProducts();
-			?>
-			<table class="table table-condensed table-striped">
-					<tr>
-						<th>Category ID</th>
-						<th>Category Name</th>
-						<th>Description</th>
-						<th>Action</th>
-						<th>image</th>
-					</tr>
-			<?php
-				foreach($category as $cat){?>
-					<tr>
-						<td><?php echo $cat["pro_id"];?></td>
-						<td><?php echo $cat["pro_name"];?></td>
-						<td><?php echo $cat["pro_description"];?></td>
-						<td>
-							<a href="delete.php?id=<?php echo $cat['pro_id'];?>" onclick="return confirm('You want to delete?')" class="btn btn-danger">Delete</a>
-							<a href="#" class="btn btn-danger">Update</a>
-							<a href="#" class="btn btn-danger">Detail</a>
-						</td>
-						<td><img src='../<?php echo $cat['pro_image']; ?>' style='width:128px;height:128px'></td>
-					</tr>
-			<?php }?>
-			</table>
-		</div>
-	</div>
-</div>
-<?php
-include ('../template/footer.php');
-?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>language</title>
+	<meta charset='utf-8' />
+</head>
+<body>
+	<ul>
+		<li><a href="switch_lang.php?lang=1">Khmer</a> ||
+			<a href="switch_lang.php?lang=2">English</a></li>
+		</ul>
+
+		<ul>
+		<li><a href=""><?php echo _t_home;?></a></li>
+		<li><a href=""><?php echo _t_product;?></a></li>
+		<li><a href=""><?php echo _t_contact;?></a></li>
+		<li><a href=""><?php echo _t_student;?></a></li>
+	</ul>
+	<hr/>
+	<?php 
+		$select = "select * from tbl_lang";
+		$query = mysqli_query($db,$select);
+		$numrow = mysqli_num_rows($query);
+		if($numrow>0){
+			while($row = mysqli_fetch_object($query)){;
+				if($_SESSION['lang']==1){
+					$how=$row->kh;
+				}else if($_SESSION['lang']==2){
+					$how=$row->en;
+				}
+				echo $how . "<br/>";
+			}
+		}
+	?>
+</body>
+</html>

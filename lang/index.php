@@ -2,6 +2,7 @@
 	//header("Content-type: text/html; charset=utf-8");
 	$db = mysqli_connect("localhost","root","","cim");
 	mysqli_query ($db,"set character_set_results='utf8'");
+
 	//mysqli_query("SET NAMES 'UTF8'",$db);
 	include ('define_lang.php');
 ?>

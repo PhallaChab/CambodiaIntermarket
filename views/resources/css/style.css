@@ -413,6 +413,11 @@ ul.last li a:hover{
 	color: #FFF;
 }
 .col_1_of_3:first-child { margin-left: 0; }
+.col_1_of_3:nth-child(4) { margin-left: 0; }
+.col_1_of_3:nth-child(7) { margin-left: 0; }
+.col_1_of_3:nth-child(10) { margin-left: 0; }
+.col_1_of_3:nth-child(13) { margin-left: 0; }
+
 h2.head{
 	font-size: 1.7em;
 	text-transform: uppercase;
@@ -1026,14 +1031,62 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+.login_account table td {
+	width: 100%;
+}
+.login_account form input[type="text"], .login_account form select {
+	font-size:0.95em;
+	color:#777;
+	padding: 8px;
+	outline: none;
+	margin:10px 0;
+	width:91%;
+	font-family: 'Exo 2', sans-serif;
+	border:none;
+	box-shadow:0 0 2px #aaa;
+	-webkit-box-shadow:0 0 2px #aaa;
+	-moz-box-shadow:0 0 2px #aaa;
+	-o-box-shadow:0 0 2px #aaa;
+}
+.login_account form input[type="password"], .login_account form select {
+	font-size:0.95em;
+	color:#777;
+	padding: 8px;
+	outline: none;
+	margin:10px 0;
+	width:91%;
+	font-family: 'Exo 2', sans-serif;
+	border:none;
+	box-shadow:0 0 2px #aaa;
+	-webkit-box-shadow:0 0 2px #aaa;
+	-moz-box-shadow:0 0 2px #aaa;
+	-o-box-shadow:0 0 2px #aaa;
+}
+.login_account table td {
+	width: 100%;
+}
 .register_account{
 	border-top:1px solid #ddd;
 	padding:2% 0;
 }
-.register_account table td {
-	width: 100%;
-}
+
 .register_account form input[type="text"], .register_account form select {
+	font-size:0.95em;
+	color:#777;
+	padding: 8px;
+	outline: none;
+	margin:10px 0;
+	width:91%;
+	font-family: 'Exo 2', sans-serif;
+	border:none;
+	box-shadow:0 0 2px #aaa;
+	-webkit-box-shadow:0 0 2px #aaa;
+	-moz-box-shadow:0 0 2px #aaa;
+	-o-box-shadow:0 0 2px #aaa;
+}
+
+.register_account form input[type="password"], .register_account form select {
 	font-size:0.95em;
 	color:#777;
 	padding: 8px;
@@ -1088,7 +1141,7 @@ button.grey:hover {
 	color: #FFF;
 }
 .register_account form input[type="text"].code {
-	width: 15%;
+	width: 16%;
 }
 p.code{
 	color:#777;

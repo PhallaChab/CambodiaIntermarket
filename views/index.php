@@ -40,25 +40,24 @@
 	<div class='wrap'>
 		<div class='section group'>
 		  	<div class='cont span_2_of_3'>
-			  	<h2 class='head'>JUST ARRIVED</h2>
+			  	<h2 class='head'><?php echo _t_justarr;?></h2>
 				<div class='top-box'>
 					<?php
 						$product =  getProducts();
 						foreach ($product as $pro){
 							echo "<div class='col_1_of_3 span_1_of_3'>
-							 		<a href='single.html'>
+							 		<a href='details.php?id=".$pro['pro_id']."'>
 									<div class='inner_content clearfix'>
 										<div class='product_image'>
 											<img src='resources/".$pro['pro_image']."' alt=''/>
 										</div>
 										<div class='sale-box1'>
-											<span class='on_sale title_shop'>New</span>
+											<span class='on_sale title_shop'>"._t_new."</span>
 										</div>	
 					                    <div class='price'>
 										    <div class='cart-left'>
 												<p class='title'>".$pro['pro_name']."</p>
 												<div class='price1'>
-												  <span class='reducedfrom'>$66.00</span>
 												  <span class='actual'>$".$pro['pro_price']."</span>
 												</div>
 											</div>

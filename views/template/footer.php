@@ -1,3 +1,4 @@
+
 	<div class="footer">
 		<div class="footer-top">
 			<div class="wrap">
@@ -22,7 +23,7 @@
 			  	<div class="col_1_of_f_1 span_1_of_f_1">
 				 	<div class="section group example">
 					   	<div class="col_1_of_f_2 span_1_of_f_2">
-					      <h3>Facebook</h3>
+					      <h3><?php echo _t_fb;?></h3>
 							<script>(function(d, s, id) {
 							  var js, fjs = d.getElementsByTagName(s)[0];
 							  if (d.getElementById(id)) return;
@@ -61,7 +62,7 @@
 			 	<div class="col_1_of_f_1 span_1_of_f_1">
 			   	<div class="section group example">
 				 <div class="col_1_of_f_2 span_1_of_f_2">
-				    <h3>Information</h3>
+				    <h3><?php echo _t_infor;?></h3>
 						<ul class="f-list1">
 						    <li><a href="#">Duis autem vel eum iriure </a></li>
 				            <li><a href="#">anteposuerit litterarum formas </a></li>
@@ -72,7 +73,7 @@
 			         	</ul>
  				 </div>
 				 <div class="col_1_of_f_2 span_1_of_f_2">
-				   <h3>Contact us</h3>
+				   <h3><?php echo _t_contact;?></h3>
 						<div class="company_address">
 					                <p>500 Lorem Ipsum Dolor Sit,</p>
 							   		<p>22-56-2-9 Sit Amet, Lorem,</p>

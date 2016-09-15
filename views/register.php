@@ -2,20 +2,29 @@
     include ('template/header.php');
     include ('../include/functions.php');
 ?>
+<head>
+    <style type="text/css">
+        .error {color: #FF0000;font-size: 28px;}
+    </style>
+</head>
 <div class='register_account'>
     <div class='wrap'>
         <h4 class='title'>Create an Account</h4>
         <form method='POST'>
             <div class='col_1_of_2 span_1_of_2'>
-                <div><input type='text' name='name' value='' placeholder='Name'></div>
-                <div><input type='text' name='company_name' value='' placeholder='Company Name' '></div>
-                <div><input type='text' name='address' value='' placeholder='Address'></div>
+                <div><input type='text' name='name' value='' placeholder='Name' required>
+                <span class="error">*</div>
+                <div><input type='text' name='company_name' value='' placeholder='Company Name' required><span class="error">*</div>
+                <div><input type='text' name='address' value='' placeholder='Address' required>
+                <span class="error">*</div>
             </div>
             <div class='col_1_of_2 span_1_of_2'>
-                <div><input type='text' name='email' value='' placeholder='E-Mail'></div>
-                <div><input type='password' name='pass' value='' placeholder='password'></div>
-                <input type='text' name='code' value='' class='code' placeholder='Country Code'> +
-                <input type='text' name='phone' value='' class='number' placeholder='Phone Number'>
+                <div><input type='text' name='email' value='' placeholder='E-Mail' required>
+                <span class="error">*</div>
+                <div><input type='password' name='pass' value='' placeholder='password' required>
+                <span class="error">*</div>
+                <input type='text' name='code' value='' class='code' placeholder='Country Code' required> +
+                <input type='text' name='phone' value='' class='number' placeholder='Phone Number' required><span class="error">*
             </div>
             <div class='clear'></div>
             <button class='grey' type='submit' name='btnSubmit'>Register</button>

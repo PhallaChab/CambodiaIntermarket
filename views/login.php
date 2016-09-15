@@ -21,8 +21,8 @@
 		       		<h4 class="title">Registered Customers</h4>
 			        <form method='POST'>
 			            <div class='col_1_of_2 span_1_of_2'>
-			                <div><input type='text' name='email' value='' placeholder='E-mail'></div>
-			                <div><input type='password' name='pass' value='' placeholder='Password'></div>
+			                <div><input type='text' name='email' value='' placeholder='E-mail' required></div>
+			                <div><input type='password' name='pass' value='' placeholder='Password' required></div>
 			            </div>
 			            <div class='clear'></div>
 			            <button class='grey' type='submit' name='btnLogin'>Log In</button>

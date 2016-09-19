@@ -2,10 +2,11 @@
 	define("_t_home", "Home");
 	define("_t_glass", "Sun Glassess");
 	define("_t_watch", "Watch");
-	define("_t_bag", "Hand Back");
+	define("_t_bag", "Hand Bag");
 	define("_t_cosmetic", "Cosmetic");
 	define("_t_siren", "Siren");
 	define("_t_login", "Log In");
+	define("_t_logout", "Log Out");
 	define("_t_signup", "Sing Up");
 	define("_t_lang", "Language");
 	define("_t_search", "Search");

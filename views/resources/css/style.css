@@ -1466,7 +1466,7 @@ ul.dc_pagination li a:hover{
 	right: 14px;
 	top: 50%;
 	margin-top: -3px;
-	border: 6px solid transparent;
+	/*border: 6px solid transparent;*/
 	border-top: 6px solid #fff;
 	z-index: 1;
 	-webkit-transform-origin: 50% 20%;

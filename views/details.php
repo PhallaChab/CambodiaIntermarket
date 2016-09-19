@@ -3,7 +3,7 @@
     mysqli_query ( $db,"set character_set_results='utf8'" );
 
     include ('template/header.php');
-    include ('../include/functions.php');
+    include ('../models/products.php');
 
 ?>
 <head>
@@ -48,7 +48,7 @@
             <div class="cont span_2_of_3">
             	<?php
             		$id = $_GET['id'];
-					$product =  getProductImage($id);
+					$product =  Product::getProductImage($id);
 				?>
                 <div class="grid images_3_of_2">
                     <ul id="etalage">

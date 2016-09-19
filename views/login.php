@@ -1,6 +1,24 @@
 <?php
+	ob_start();
     include ('template/header.php');
-    include ('../include/functions.php');
+    session_start();
+    include ('../models/users.php');
+
+	if(isset($_POST['btnLogin'])){
+	    $email = $_POST['email'];
+	    $password = md5($_POST['pass']);
+	    $query = User::login($email,$password);
+	    if(mysqli_num_rows($query)>0){
+	        while($row=mysqli_fetch_array($query)){
+	        	$_SESSION['login_user']=$row['name']; // Initializing Session
+	        	header("location:..\index.php");
+	        }
+	    }else{
+			echo "<div class='form'><h3>Username/password is incorrect.</h3><br/>Click here to <a href='login.php'>Login</a></div>";
+	    	//echo "Login not success!";
+	    }
+	    //}
+	}else{
 ?>
 <div class="login">
   	<div class="wrap">
@@ -19,7 +37,7 @@
 			<div class="login_account">
 				<div class='wrap'>
 		       		<h4 class="title">Registered Customers</h4>
-			        <form method='POST'>
+			        <form method='POST' action=''>
 			            <div class='col_1_of_2 span_1_of_2'>
 			                <div><input type='text' name='email' value='' placeholder='E-mail' required></div>
 			                <div><input type='password' name='pass' value='' placeholder='Password' required></div>
@@ -35,17 +53,6 @@
 	</div>
 </div>
 <?php
-	if(isset($_POST['btnLogin'])){
-        $email = $_POST['email'];
-        $password = $_POST['pass'];
-        $userLogin = usersLogin($email,$password);
-        $row = mysqli_fetch_array($userLogin);
-        if($row['email']==$email && $row['pass']==$password){
-        	echo "login success";
-        }else{
-        	echo "wrong pass or user!";
-        }
-        
-    }
+	}
     include ('template/footer.php');
 ?>

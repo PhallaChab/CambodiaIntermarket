@@ -1,6 +1,6 @@
 <?php
     include ("template/header.php");
-    include ("../include/functions.php");
+    include ("../models/products.php");
 ?>
     <div class="mens">
         <div class="slider_container">
@@ -49,7 +49,7 @@
                     </div>
                     <div class="top-box">
                     <?php
-                        $product =  getSunglass();
+                        $product =  Product::getSunglass();
                         foreach ($product as $pro){
                             echo "<div class='col_1_of_3 span_1_of_3'>
                                 <a href='details.php?id=".$pro['pro_id']."'>

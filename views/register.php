@@ -1,6 +1,25 @@
 <?php
+    ob_start();
     include ('template/header.php');
-    include ('../include/functions.php');
+    include ('../models/users.php');
+
+    if(isset($_POST['btnSubmit'])){
+        //session_start();
+        $name = $_POST['name'];
+        $company_name = $_POST['company_name'];
+        $address = $_POST['address'];
+        $email = $_POST['email'];
+        $password = md5($_POST['pass']);
+        $code = $_POST['code'];
+        $phone = $_POST['phone'];
+        //var_dump($name);
+        $insert_users = User::insert($name,$company_name,$address,$email,$password,$code,$phone);
+        if($insert_users)
+        {
+            //echo "You have been registered!";
+            header ("location:".URL."views/login.php");
+        }
+    }
 ?>
 <head>
     <style type="text/css">
@@ -33,21 +52,5 @@
     </div>
 </div>
 <?php
-    if(isset($_POST['btnSubmit'])){
-        //session_start();
-        $name = $_POST['name'];
-        $company_name = $_POST['company_name'];
-        $address = $_POST['address'];
-        $email = $_POST['email'];
-        $password = md5($_POST['pass']);
-        $code = $_POST['code'];
-        $phone = $_POST['phone'];
-        //var_dump($name);
-        $insert_users = insertUsers($name,$company_name,$address,$email,$password,$code,$phone);
-        if($insert_users)
-        {
-            echo "You have been registered!";
-        }
-    }
     include ('template/footer.php');
 ?>

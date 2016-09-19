@@ -1,6 +1,6 @@
 <?php
-    include ('template/header.php');
-    include ('../include/functions.php');
+	include ("template/header.php");
+	include ("../models/products.php");
 ?>
 <div id="fwslider">
     <div class="slider_container">
@@ -43,7 +43,7 @@
 			  	<h2 class='head'><?php echo _t_justarr;?></h2>
 				<div class='top-box'>
 					<?php
-						$product =  getProducts();
+						$product =  Product::getProducts();
 						foreach ($product as $pro){
 							echo "<div class='col_1_of_3 span_1_of_3'>
 							 		<a href='details.php?id=".$pro['pro_id']."'>

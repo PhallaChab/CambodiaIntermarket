@@ -1,5 +1,7 @@
 <?php
 	include ('../lang/define_lang.php');
+	include ("../config/config.php");
+	//include ("auth.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,20 +28,33 @@
 <div class="header-top">
 	   <div class="wrap"> 
 			<div class="header-top-left">
-			  	<div class="box">
-			  		<div class="cssmenu">
-						<ul>
-							<li><a href="../lang/switch_lang.php?lang=2">English</a></li> |
-							<li><a href="../lang/switch_lang.php?lang=1">Khmer</a></li>
-						</ul>
-					</div>
-   				</div>
-   				<div class="clear"></div>
-   			</div>
-   			<div class="cssmenu">
+			  	   <div class="box dropdown">
+						<a href="../lang/switch_lang.php?lang=2" style="color:#fff;">English</a> | 
+						<a href="../lang/switch_lang.php?lang=1" style="color:#fff;">Khmer</a>
+   				    </div>
+   				    <div class="box1">
+   				    <?php
+	   				    if($_SESSION['login_user']!=null){
+	   				        echo "<select tabindex='4' class='dropdown'>";
+									echo "<option value='' class='label' value=''>Welcom :".$_SESSION['login_user']."</option>
+									</select>";
+						}else{
+	   				        echo "no user";
+	   				    }
+					?>
+   				    </div>
+   				    <div class='clear'></div>
+   			 </div>
+			 <div class="cssmenu">
 				<ul>
-					<li><a href="login.php"><?php echo _t_login;?></a></li> |
-					<li><a href="register.php"><?php echo _t_signup;?></a></li>
+					<?php
+						if($_SESSION['login_user']!=null){
+							echo '<li><a href="logout.php">'._t_logout.'</a></li>';
+						}else{
+							echo '<li><a href="login.php"> '._t_login.'</a></li> | 
+								<li><a href="register.php">'._t_signup.'</a></li>';
+						}
+					?>
 				</ul>
 			</div>
 			<div class="clear"></div>
@@ -53,8 +68,8 @@
 				</div>
 				<div class="menu">
 	            <ul class="megamenu skyblue">
-				<li class="active grid"><a href="index.php"><?php echo _t_home;?></a></li>
-				<li><a class="color4" href="glassess.php"><?php echo _t_glass;?></a>
+				<li class="active grid"><a href="<?php echo URL; ?>"><?php echo _t_home;?></a></li>
+				<li><a class="color4" href="<?php echo URL;?>views/glassess.php"><?php echo _t_glass;?></a>
 					<!-- <div class="megapanel">
 						<div class="row">
 							<div class="col1">
@@ -94,11 +109,11 @@
 						  </div>
 						</div>
 					</li> -->				
-				<li><a class="color5" href="watches.php"><?php echo _t_watch;?></a>
-				<li><a class="color6" href="handbag.php"><?php echo _t_bag;?></a></li>
-				<li><a class="color7" href="cosmetic.php"><?php echo _t_cosmetic;?></a></li>
+				<li><a class="color5" href="<?php echo URL;?>views/watches.php"><?php echo _t_watch;?></a>
+				<li><a class="color6" href="<?php echo URL;?>views/handbag.php"><?php echo _t_bag;?></a></li>
+				<li><a class="color7" href="<?php echo URL;?>views/cosmetic.php"><?php echo _t_cosmetic;?></a></li>
 				<li><a class="color7" href="#"><?php echo _t_siren;?></a></li>
-				<li><a class="color7" href="aboutus.php"><?php echo _t_about;?></a></li>
+				<li><a class="color7" href="<?php echo URL;?>views/aboutus.php"><?php echo _t_about;?></a></li>
 
 			</ul>
 			</div>

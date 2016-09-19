@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	include ('template/header.php');
-	include ('../include/functions.php');
+	include ('../models/products.php');
 ?>
 <div class='main'>
 	<div class='wrap'>
@@ -14,16 +14,16 @@
 							$searchname = "";
 						}else{
 							$searchname  = $_POST['search'];
-						 	$result = preg_replace("#[^0-9a-z]#i", "", $searchname);
-						 	$search = getSearch($result);
+						 	$search = preg_replace("#[^0-9a-z]#i", "", $searchname);
+						 	$result = Product::getSearch($search);
 						 	
 						 	// if($search == $result){
-						 	if($search=="No"){
+						 	if($result=="No"){
 						 		echo "<p>There is no product.</p>";
 						 	}else{
-						 		foreach ($search as $resultsearch){
+						 		foreach ($result as $resultsearch){
 						 			echo "<div class='col_1_of_3 span_1_of_3'>
-										 	<a href='single.html'>
+										 	<a href='details.php?id=".$resultsearch['pro_id']."'>
 												<div class='inner_content clearfix'>
 													<div class='product_image'>
 														<img src='resources/".$resultsearch['pro_image']."' alt=''/>

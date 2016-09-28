@@ -7,12 +7,12 @@
         $row = mysqli_fetch_array($select);
         if($row){
             $cat_name = $row['cat_name'];
+            $cat_id = $row['cat_id'];
             $proid = $row['pro_id'];
             $pname = $row['pro_name'];
             $pprice = $row['pro_price'];
             $pcode = $row['pro_code'];
             $pimage = $row['pro_image'];
-            $pcat = $row['cat_id'];
             $deskh = $row['pro_descriptionKh'];
             $desen = $row['pro_descriptionEn'];
             $pinfor = $row['pro_information'];
@@ -76,18 +76,18 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-xs-10">
-                                <select class="form-control" id="" name="cat">
-                                    <option style="display:none;">
-                                        <?php echo $cat_name; ?>
+                                <select class="form-control" id="category" name="cat">
+                                    <option style="display:none" value="<?php echo $cat_id;?>">
+                                        <?php echo $cat_name;?>
                                     </option>
-                                <?php 
-                                    $category = Products::getCategory();
-                                    foreach($category as $cat){?>
-                                        <option value="<?php echo $cat['cat_id'];?>" name="cat">
-                                            <?php echo $cat['cat_name'];?>
+                               <?php 
+                                   $category = Products::getCategory();
+                                   foreach($category as $cat){?>
+                                        <option value="<?php echo $cat['cat_id'];?>">
+                                           <?php echo $cat['cat_name'];?>
                                         </option>
-                                <?php }?>
-                                </select>
+                               <?php }?>
+                               </select>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -119,7 +119,7 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-xs-10">
-                                <textarea rows="7" cols="36" type='text' name='desInfo' placeholder='Product Information' required>
+                                <textarea rows="7" cols="36" type='text' name='desInfo' placeholder='Product Information'>
                                     <?php echo $pinfor; ?>
                                 </textarea>
                             </div>

@@ -8,9 +8,6 @@
     if(@$_SESSION['login_user']!=""){
     	header("location:".URL);
     }
-    // if(@$_SESSION['rerole']!=''){
-    // 	header("location:".URL);
-    // }
 
     $errLogin = '';
 
@@ -24,11 +21,11 @@
 	        	$_SESSION['login_user']=$row['name']; // Initializing Session
 	        	$_SESSION['rerole']=$row['role'];
 
-	        	if($_SESSION['rerole']=="admin"){
-	        		header("location:".URL."admin");
-	        	}else if($_SESSION['rerole']=="user"){
-	        		header("location:".URL);
-	        	}
+		        if($_SESSION['rerole']=="admin"){
+		    		header("location:".URL."admin");
+		    	}else if($_SESSION['rerole']=="user"){
+		    		header("location:".URL);
+		    	}
 	        }
 	    }else{
 		    $errLogin = "Please check your email and password again!";

@@ -1,13 +1,5 @@
 <?php 
     include ('../models/admin.php');
-    if (isset($_GET['id']) && is_numeric($_GET['id']) && $_GET['id'] > 0){
-        $id = $_GET['id'];
-        $select= Products::getProductByid($id);
-        $row = mysqli_fetch_array($select);
-        if($row){
-            $cat_name = $row['cat_name'];
-        }
-    }
 ?>
 <style type="text/css">
     body { height: 1000px; }
@@ -43,7 +35,7 @@
                             <td scope="row">1</td>
                             <td><?php echo $pro['pro_name'];?></td>
                             <td><?php echo "$ ".$pro['pro_price'];?></td>
-                            <td><?php //echo $cat_name;?></td>
+                            <td><?php echo $pro['cat_name']?></td>
                             <td><?php echo $pro['pro_code'];?></td>
                             <td><?php echo $pro['pro_descriptionEn'];?></td>
                             <td><?php echo $pro['pro_descriptionKh'];?></td>

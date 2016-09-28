@@ -1,6 +1,12 @@
 
 <?php
     include ('../models/admin.php');
+    include ("../config/config.php");
+    session_start();
+
+    if ($_SESSION['login_user']!='Undefined' && $_SESSION['rerole']!="admin") {
+        header("location: ".URL."login.php");
+    }
 
     $postSuceess="";
     if(isset($_POST['post'])){
@@ -99,7 +105,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-xs-10">
-                                    <textarea rows="7" cols="36" type='text' name='desInfo' value='' placeholder='Product Information' required></textarea>
+                                    <textarea rows="7" cols="36" type='text' name='desInfo' value='' placeholder='Product Information'></textarea>
                                 </div>
                             </div>
                             <div class='clear'></div>

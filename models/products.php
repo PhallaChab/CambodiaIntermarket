@@ -1,5 +1,5 @@
 <?php
-include ("../include/functions.php");
+include ("include/functions.php");
 // Product class is used instead of above four get product by category functions
 class Product {
     public static function getProducts(){
@@ -11,11 +11,19 @@ class Product {
     }
 
     public static function getSunglass(){
-        return runQuery("select * from products where cat_id = 2");
+        return runQuery("select * from products where cat_id = 1");
     }
 
     public static function getWatch(){
+        return runQuery("select * from products where cat_id = 2");
+    }
+
+    public static function getHandbag(){
         return runQuery("select * from products where cat_id = 3");
+    }
+
+    public static function getCosmetic(){
+        return runQuery("select * from products where cat_id = 4");
     }
 
     public static function getSearch($result){

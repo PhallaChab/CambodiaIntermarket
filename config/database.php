@@ -2,8 +2,9 @@
 /*
 | Database configuration
  */
-define("SERVER", "localhost");
-define("USERNAME", "root");
-define("PASSWORD", "");
-define("DATABASE", "cim");
+define("DB_SERVER", "localhost");
+define("DB_USERNAME", "root");
+define("DB_PASSWORD", "");
+define("DB_DATABASE", "cim");
 
+?>

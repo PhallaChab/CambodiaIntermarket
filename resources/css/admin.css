@@ -1,0 +1,53 @@
+h4.title{
+    width: 31em;
+}
+.col-md-12{
+    margin-top:20px;
+    background: #f7f7f7;
+}
+#table-container{
+    margin-top:30px;
+}
+.cambodia:hover{
+    text-decoration: none;
+}
+.cambodia{
+    color:#000;
+}
+.success{
+    color:#4cb1ca;
+}
+.register_account{
+    /*width:100%;*/
+    border-top:none;
+}
+.post{
+    padding: 10px 30px;;
+    background: #555;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Exo 2', sans-serif;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+.post:hover{
+    background: #4cb1ca;
+}
+.error{
+    color:red;
+    font-size: 20px;
+    float: right;
+    margin-top: -37px;
+}
+.box {
+    float: left;
+    width: 81.5%;
+    margin-right: 0%;
+}
+.label{
+    display: none;
+}
+textarea{
+    margin-top:10px;
+}

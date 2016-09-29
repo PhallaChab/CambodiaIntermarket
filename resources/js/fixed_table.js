@@ -9,7 +9,7 @@ function moveScroll(){
         clone_table.attr('id', 'clone');
         clone_table.css({position:'fixed',
                  'pointer-events': 'none',
-                 top:0});
+                 top:50});
         clone_table.width($("#maintable").width());
         $("#table-container").append(clone_table);
         $("#clone").css({visibility:'hidden'});

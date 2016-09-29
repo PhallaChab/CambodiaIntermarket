@@ -50,8 +50,8 @@
         }
     }
 ?>
-<div class="col-md-12">
-    <?php include ("../template/menu_admin.php");?>
+<!-- <div class="col-md-12">
+    <?php //include ("../template/menu_admin.php");?>
     <div class="col-md-9">
         <div class='register_account'>
             <div class='wrap'>
@@ -129,6 +129,116 @@
                         <div class='clear'></div>
                     </form>
                 </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div id="wrapper">    
+    <?php 
+        include ("../template/menu_admin.php");
+    ?>
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">
+                        Update Product
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li>
+                            <i class="fa fa-dashboard"></i>  <a href="index.php">Dashboard</a>
+                        </li>
+                        <li class="active">
+                            <i class="fa fa-table"></i> UpdateProduct
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <form role="form" method="POST" enctype="multipart/form-data" >
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <div class="col-xs-10">
+                                <label>Product Name</label>
+                                <input class="form-control" name="name" value="<?php echo $pname; ?>" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-10">
+                                <label>Product Price</label>
+                                <input class="form-control" name="price" value="<?php echo $pcode; ?>" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-10">
+                                <label>Product Code</label>
+                                <input class="form-control" name="code" value="<?php echo $pcode; ?>">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="col-xs-10">
+                                <label>Selects category</label>
+                                <select class="form-control" name="cat">
+                                    <option style="display:none" value="<?php echo $cat_id;?>">
+                                        <?php echo $cat_name;?>
+                                    </option>
+                               <?php 
+                                   $category = Products::getCategory();
+                                   foreach($category as $cat){?>
+                                        <option value="<?php echo $cat['cat_id'];?>">
+                                           <?php echo $cat['cat_name'];?>
+                                        </option>
+                               <?php }?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-10">
+                                <label>Selects Image</label>
+                                <input type='file' name="image" id='uploader'><br />
+                                <?php echo "<img name='image' style='width:200px;' id='placeholder' src = '../uploads/".$pimage."'>";?>
+                            </div><br/>
+                        </div>
+                        <script type="text/javascript">
+                            $('#placeholder').previewImage( {uploader: '#uploader'});
+                        </script>
+                        
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <div class="col-xs-10">
+                                <label>Khmer Description</label>
+                                <textarea class="form-control" rows="3" name="desKh" required>
+                                    <?php echo $deskh; ?>
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-10">
+                                <label>English Description</label>
+                                <textarea class="form-control" rows="3" name="desEn" required>
+                                    <?php echo $desen; ?>
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-10">
+                                <label>Product Information</label>
+                                <textarea class="form-control" rows="3" name="desInfo">
+                                    <?php echo $pinfor; ?>
+                                </textarea>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-10">
+                            <button type="submit" name='edit' class="btn btn-success">Submit Post</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

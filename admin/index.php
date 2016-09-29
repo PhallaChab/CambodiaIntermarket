@@ -7,40 +7,10 @@
     if ($_SESSION['login_user']!='Undefined' && $_SESSION['rerole']!="admin") {
         header("location: ".URL."login.php");
     }
-
-    $postSuceess="";
-    if(isset($_POST['post'])){
-        $pname = $_POST['name'];
-        $pprice = $_POST['price'];
-        $pcode = $_POST['code'];
-        $type = basename($_FILES['image']['type']);
-        $pimage = basename($_FILES['image']['name']);
-        $pcat = $_POST['cat'];
-        $deskh = $_POST['desKh'];
-        $desen = $_POST['desEn'];
-        $pinfor = $_POST['desInfo'];
-        $date = date("Y/m/d");
-        $yes = 1;
-        
-        if($type != "png" && $type != "jpg" && $type != "jpeg"){
-            echo "This file not respond because it is not file image.";
-            $yes = 0;
-        }else{
-            $to = "C:/xampp/htdocs/CambodiaIntermarket/uploads/".$_FILES['image']['name'];
-            move_uploaded_file($_FILES['image']['tmp_name'],$to);
-            $insert_product = Products::insert($pname,$pprice,$pcode,$pcat,$pimage,$deskh,$desen,$pinfor,$date);
-            $postSuceess="You have successfull post product.";
-            $yes=1;
-        }
-    }
 ?>
-<style type="text/css">
-    img {
-      max-width: 250px;
-    }
-</style>
-<div class="col-md-12">
-    <?php include ("../template/menu_admin.php");?>
+
+<!-- <div class="col-md-12">
+    <?php //include ("../template/menu_admin.php");?>
     <div class="col-md-10">
         <div class='register_account'>
             <div class='wrap'>
@@ -113,6 +83,118 @@
                             <br/>
                             <div class='clear'></div>
                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div id="wrapper">    
+    <?php 
+        include ("../template/menu_admin.php");
+    ?>
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">
+                        Dashboard
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li class="active">
+                            <i class="fa fa-dashboard"></i> Dashboard
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-comments fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">26</div>
+                                    <div>New Comments!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-tasks fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">12</div>
+                                    <div>New Tasks!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-shopping-cart fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">124</div>
+                                    <div>New Orders!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-support fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">13</div>
+                                    <div>Support Tickets!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>

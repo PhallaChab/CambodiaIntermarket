@@ -26,16 +26,12 @@
 										 	<a href='details.php?id=".$resultsearch['pro_id']."'>
 												<div class='inner_content clearfix'>
 													<div class='product_image'>
-														<img src='resources/".$resultsearch['pro_image']."' alt=''/>
+														<img src='uploads/".$resultsearch['pro_image']."' alt=''/>
 													</div>
-													<div class='sale-box1'>
-														<span class='on_sale title_shop'>New</span>
-													</div>	
 								                    <div class='price'>
 													    <div class='cart-left'>
 															<p class='title'>".$resultsearch['pro_name']."</p>
 															<div class='price1'>
-															  <span class='reducedfrom'>$66.00</span>
 															  <span class='actual'>$".$resultsearch['pro_price']."</span>
 															</div>
 														</div>

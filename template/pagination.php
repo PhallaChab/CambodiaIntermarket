@@ -24,11 +24,11 @@
                     30 </option>
             </select> per page
         </div>
-        <ul class="dc_pagination dc_paginationA dc_paginationA06">
+        <!-- <ul class="dc_pagination dc_paginationA dc_paginationA06">
             <li><a href="#" class="previous">Pages</a></li>
             <li><a href="#">1</a></li>
             <li><a href="#">2</a></li>
-        </ul>
+        </ul> -->
         <div class="clear"></div>
     </div>
     <div class="clear"></div>

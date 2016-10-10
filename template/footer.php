@@ -5,7 +5,7 @@
 			  <div class="section group example">
 				<div class="col_1_of_2 span_1_of_2">
 					<ul class="f-list">
-					  <li><img src="resources/images/2.png"><span class="f-text">Free Shipping on orders over $ 100</span><div class="clear"></div></li>
+					  <li><img src="resources/images/2.png"><span class="f-text"><?php echo _t_order;?></span><div class="clear"></div></li>
 					</ul>
 				</div>
 				<div class="col_1_of_2 span_1_of_2">
@@ -63,28 +63,26 @@
 			   	<div class="section group example">
 				 <div class="col_1_of_f_2 span_1_of_f_2">
 				    <h3><?php echo _t_infor;?></h3>
-						<ul class="f-list1">
+						<!-- <ul class="f-list1">
 						    <li><a href="#">Duis autem vel eum iriure </a></li>
 				            <li><a href="#">anteposuerit litterarum formas </a></li>
 				            <li><a href="#">Tduis dolore te feugait nulla</a></li>
 				             <li><a href="#">Duis autem vel eum iriure </a></li>
 				            <li><a href="#">anteposuerit litterarum formas </a></li>
 				            <li><a href="#">Tduis dolore te feugait nulla</a></li>
-			         	</ul>
+			         	</ul> -->
  				 </div>
 				 <div class="col_1_of_f_2 span_1_of_f_2">
 				   <h3><?php echo _t_contact;?></h3>
 						<div class="company_address">
-					                <p>500 Lorem Ipsum Dolor Sit,</p>
-							   		<p>22-56-2-9 Sit Amet, Lorem,</p>
-							   		<p>USA</p>
-					   		<p>Phone:(00) 222 666 444</p>
-					   		<p>Fax: (000) 000 00 00 0</p>
-					 	 	<p>Email: <span>mail[at]leoshop.com</span></p>
+					        <p>Office A-8.01.02.03 (Ground floor), New Steng Mean Chey Market, Sangkat Steng Mean Chey, Khan Mean Chey, Phnom Penh</p>
+					   		<p>Office :(0) 23 644 17 17</p>
+					   		<p>Phone : (0) 12 611 606</p>
+					 	 	<p>Email: preapratha@cambodiaintermarket.com </p>
 					   		
 					   </div>
 					   <div class="social-media">
-						    <ul>
+						     <ul>
 						        <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="Google"><a href="#" target="_blank"> </a></span></li>
 						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Twitter"><a href="https://twitter.com/C_Intermarket?lang=en" target="_blank"> </a> </span></li>
 						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Instagram"><a href="https://www.instagram.com/cambodia_intermarket/" target="_blank"> </a></span></li>

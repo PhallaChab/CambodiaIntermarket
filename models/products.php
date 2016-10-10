@@ -26,6 +26,22 @@ class Product {
         return runQuery("select * from products where cat_id = 4");
     }
 
+    // public static function getCosmetic(){
+    //     return runQuery("select * from products where cat_id = 5");
+    // }
+
+    // public static function getCosmetic(){
+    //     return runQuery("select * from products where cat_id = 6");
+    // }
+
+    // public static function getCosmetic(){
+    //     return runQuery("select * from products where cat_id = 7");
+    // }
+
+    // public static function getCosmetic(){
+    //     return runQuery("select * from products where cat_id = 8");
+    // }
+
     public static function getSearch($result){
         $sql = "select * from products where pro_name LIKE '%".$result."%' or pro_price LIKE '%".$result."%'";
         $rows =  runQuery($sql);

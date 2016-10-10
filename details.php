@@ -8,10 +8,6 @@
 ?>
 <head>
     <meta charset='utf-8' />
-	<link href="resources/css/etalage.css" rel="stylesheet">
-    <script src="resources/js/slides.min.jquery.js"></script>
-    <script src="resources/js/jquery.flexisel.js"></script>
-    <script src="resources/js/jquery.etalage.min.js"></script>
     <script>
     $(function() {
         $('#products').slides({
@@ -41,7 +37,6 @@
     });
     </script>
 </head>
-<div class="mens">
     <div class="main">
         <div class="wrap">
             <ul class="breadcrumb breadcrumb__t"><a class="home" href="index.php">Home</a> / <a href="#">Details</a></ul>
@@ -165,7 +160,7 @@
             ?>
     </div>
     <div class="clear"></div>
-</div>
+
 <?php
     include ('template/footer.php');
 ?>

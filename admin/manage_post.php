@@ -1,6 +1,7 @@
 <?php
     include ('../models/admin.php');
-
+    
+    
     $postSuceess="";
     if(isset($_POST['post'])){
         $pname = $_POST['name'];

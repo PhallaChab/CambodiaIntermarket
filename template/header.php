@@ -22,6 +22,8 @@
 	<meta name="google-site-verification" content="Ry4SC9lqacxjYGDI_lYE9LC_Kg6POipip5-QEJCG4ZA" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<link href="resources/css/bootstrap.min.css" rel="stylesheet">
 	<link href="resources/css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="resources/css/form.css" rel="stylesheet" type="text/css" media="all" />
 	<link href='http://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
@@ -30,12 +32,10 @@
 	<link href="resources/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
 	<script type="text/javascript" src="resources/js/megamenu.js"></script>
 	<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
-	<!--start slider -->
-	    <link rel="stylesheet" href="resources/css/fwslider.css" media="all">
-	    <script src="resources/js/jquery-ui.min.js"></script>
-	    <script src="resources/js/css3-mediaqueries.js"></script>
-	    <script src="resources/js/fwslider.js"></script>
-	<!--end slider -->
+	<link href="resources/css/etalage.css" rel="stylesheet">
+    <script src="resources/js/slides.min.jquery.js"></script>
+    <script src="resources/js/jquery.flexisel.js"></script>
+    <script src="resources/js/jquery.etalage.min.js"></script>
 	<script src="resources/js/jquery.easydropdown.js"></script>
 </head>
 <div class="header-top">
@@ -43,7 +43,7 @@
 			<div class="header-top-left">
 			  	   <div class="box dropdown">
 						<a href="lang/switch_lang.php?lang=2" style="color:#fff;">English</a> | 
-						<a href="lang/switch_lang.php?lang=1" style="color:#fff;">Khmer</a>
+						<a href="lang/switch_lang.php?lang=1" style="color:#fff;">ភាសាខ្មែរ</a>
    				    </div>
    				    <div class="box1">
    				    <?php
@@ -75,78 +75,108 @@
 	</div>
 	<div class="header-bottom">
 	    <div class="wrap">
-			<div class="header-bottom-left">
-				<div class="logo">
-					<a href="index.php"><img src="resources/images/logo.jpg" alt=""/></a>
-				</div>
-				<div class="menu">
-	            <ul class="megamenu skyblue">
-				<li class="active grid"><a href="<?php echo URL; ?>"><?php echo _t_home;?></a></li>
-				<li><a class="color4" href="<?php echo URL;?>glassess.php"><?php echo _t_glass;?></a>
-					<!-- <div class="megapanel">
-						<div class="row">
-							<div class="col1">
-								<div class="h_nav">
-									<h4>Contact Lenses</h4>
-									<ul>
-										<li><a href="womens.html">Daily-wear soft lenses</a></li>
-										<li><a href="womens.html">Extended-wear</a></li>
-										<li><a href="womens.html">Lorem ipsum </a></li>
-										<li><a href="womens.html">Planned replacement</a></li>
-									</ul>	
-								</div>							
-							</div>
-							<div class="col1">
-								<div class="h_nav">
-									<h4>Sun Glasses</h4>
-									<ul>
-										<li><a href="womens.html">Heart-Shaped</a></li>
-										<li><a href="womens.html">Square-Shaped</a></li>
-										<li><a href="womens.html">Round-Shaped</a></li>
-										<li><a href="womens.html">Oval-Shaped</a></li>
-									</ul>	
-								</div>							
-							</div>
-							<div class="col1">
-								<div class="h_nav">
-									<h4>Eye Glasses</h4>
-									<ul>
-										<li><a href="womens.html">Anti Reflective</a></li>
-										<li><a href="womens.html">Aspheric</a></li>
-										<li><a href="womens.html">Bifocal</a></li>
-										<li><a href="womens.html">Hi-index</a></li>
-										<li><a href="womens.html">Progressive</a></li>
-									</ul>	
-								</div>												
-							</div>
-						  </div>
-						</div>
-					</li> -->				
-				<li><a class="color5" href="<?php echo URL;?>watches.php"><?php echo _t_watch;?></a>
-				<li><a class="color6" href="<?php echo URL;?>handbag.php"><?php echo _t_bag;?></a></li>
-				<li><a class="color7" href="<?php echo URL;?>cosmetic.php"><?php echo _t_cosmetic;?></a></li>
-				<li><a class="color7" href="#"><?php echo _t_siren;?></a></li>
-				<li><a class="color7" href="<?php echo URL;?>aboutus.php"><?php echo _t_about;?></a></li>
+		    <div class="col-md-12">
+			    <div class="col-md-4">
+				    <div class="row">
+				    	<a href="index.php">
+							<img src="resources/images/logo.png" alt="" style="width: 280px;" />
+						</a>
+				    </div>
+			    </div>
+			    <div class="col-md-4">
+				    <div class="row">
+				    	<?php
+							if(!isset($_POST['search'])){
+							    $searchname = "";
+							} else {
+							    $searchname = $_POST['search'];
+							}  
+						?>
+				    	<div class="search">	
+				         	<form method="post" action="search.php"  id="searchform">  
+								<input type="text" name="search" class="textbox" placeholder="<?php echo _t_search;?>" value="<?= $searchname ?>">
+								<input type="submit" id="submit" name="submit">
+								<div id="response"> </div>
+							</form>
+				 		</div>
+				    </div>
+			    </div>
+			    <div class="col-md-4">
+				    <div class="row">
+				    	<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+		            </div>
+			    </div>
+		    </div>
 
-			</ul>
+	 		<div class="clear"></div>
+		 	<div class="">
+				<div class="menu">
+		            <ul class="megamenu skyblue">
+		            	<li class="dropdown1">
+						    <a href="#" class="dropbtn"><?php echo _t_woman;?></a>
+						    <div class="dropdown-content">
+							    <ul class="col-md-12 submenu">
+								    <li class="col-md-4">
+								      	<a href="<?php echo URL."cosmetic.php"; ?>"><?php echo _t_cosmetic;?></a>
+								      	<a href="<?php echo URL."perfume.php"; ?>"><?php echo _t_perfume;?></a>
+								      	<a href="<?php echo URL."handbag.php"; ?>"><?php echo _t_bag;?></a>
+								      	<a href="<?php echo URL."glassess.php"; ?>"><?php echo _t_glass;?></a>
+								      	<a href="<?php echo URL."w_watch.php"; ?>"><?php echo _t_watch;?></a>
+								    </li>
+								    <li class="col-md-4">
+								    </li>
+								    <li class="col-md-4">
+								      	<img src="resources/images/s2.jpg">
+								    </li>
+							    </ul>
+						    </div>
+						</li>
+						<li class="dropdown1">
+							<a class="dropbtn" href="#"><?php echo _t_man;?></a>
+							<div class="dropdown-content">
+							    <ul class="col-md-12 submenu">
+								    <li class="col-md-4">
+								    	<a href="<?php echo URL."m_belt.php"; ?>"><?php echo _t_belt; ?></a>
+								      	<a href="<?php echo URL."glassess.php"; ?>"><?php echo _t_glass;?></a>
+								      	<a href="<?php echo URL."m_watch.php"; ?>"><?php echo _t_watch;?></a>
+								      	<a href="<?php echo URL."perfume.php"; ?>"><?php echo _t_perfume;?></a>
+								    </li>
+								    <li class="col-md-4">
+								    </li>
+								    <li class="col-md-4">
+								      	<img src="resources/images/s1.jpg">
+								    </li>
+							    </ul>
+						    </div>
+						</li>	
+						<li class="dropdown1">
+							<a class="dropbtn" href="<?php echo URL."child.php";?>"><?php echo _t_child;?></a>
+						</li>
+						<li class="dropdown1">
+							<a class="dropbtn" href="#"><?php echo _t_house;?></a>
+							<div class="dropdown-content">
+							    <ul class="col-md-12 submenu">
+								    <li class="col-md-4">
+								      	<a href="<?php echo URL."siren.php"; ?>"><?php echo _t_siren;?></a>
+								    </li>
+								    <li class="col-md-4">
+								    </li>
+								    <li class="col-md-4">
+								      	<img src="resources/images/sedea.jpg">
+								    </li>
+							    </ul>
+						    </div>
+						</li>
+						<li class="dropdown1">
+							<a class="dropbtn" href="<?php echo URL;?>aboutus.php"><?php echo _t_about;?></a>
+						</li>
+					</ul>
+				</div>
 			</div>
-		</div>
-		<?php
-			if(!isset($_POST['search'])){
-			    $searchname = "";
-			} else {
-			    $searchname = $_POST['search'];
-			}  
-		?>
-	   	<div class="header-bottom-right">
-         	<div class="search">	
-	         	<form method="post" action="search.php"  id="searchform">  
-					<input type="text" name="search" class="textbox" placeholder="<?php echo _t_search;?>" value="<?= $searchname ?>">
-					<input type="submit" id="submit" name="submit">
-					<div id="response"> </div>
-				</form>
-		 	</div>
-   		 </div>
+		
+	   	<!-- <div class="header-bottom-right">
+         	
+   		</div> -->
      <div class="clear"></div>
      </div>
 	</div>

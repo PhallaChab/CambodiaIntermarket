@@ -32,9 +32,27 @@ body{
 	font-family: 'Exo 2', sans-serif;
 	background:#f7f7f7;
 }
+/*banner image*/
+.bannerimg{
+	margin:30px 0 0 -30px;
+}
+.small{
+	height: 320px; 
+	min-width: 118%;
+}
+.big{
+	min-width: 108.5%; 
+	height: 300px;
+}
+.titlerecom{
+    white-space: nowrap;
+    width: 11em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .title {
     white-space: nowrap;
-    width: 13em;
+    width: 11em;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -92,6 +110,9 @@ body{
 .menu{
 	float:left;
 	margin-top: 6px;
+	border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
 }
 /* start menu */
 .h_nav h4{
@@ -132,6 +153,12 @@ body{
 	float:right;
 	width:30.5%;
 	margin-top:10px;
+}
+/*search*/
+.searchme{
+    width: 307px;
+    border: 1px solid #000;
+    height: 45px;
 }
 .search {
 	background:#fff;
@@ -332,7 +359,7 @@ body{
 	text-align:center;
 	font-size: 1.3em;
 	color:#399FB8;
-	text-transform:uppercase;
+	/*text-transform:uppercase;*/
 	margin-bottom: 4%;
 }
 .sub-icon1 ul li p{
@@ -357,7 +384,7 @@ ul.last{
 }
 ul.last li a{
 	color:#000;
-	text-transform:uppercase;
+	/*text-transform:uppercase;*/
 }
 ul.last li a:hover{
 	color:#176375;
@@ -390,6 +417,63 @@ ul.last li a:hover{
 .span_1_of_left {
 	width:20.2%;
 }
+
+/*zoom image*/
+.column div {
+	position: relative;
+	float: left;
+	width: 300px;
+	height: 200px;
+	margin: 0 0 0 25px;
+	padding: 0;
+}
+.column div:first-child {
+	margin-left: 0;
+}
+.column div span {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	z-index: -1;
+	display: block;
+	width: 300px;
+	margin: 0;
+	padding: 0;
+	color: #444;
+	font-size: 18px;
+	text-decoration: none;
+	text-align: center;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	opacity: 0;
+}
+figure {
+	width: 222px;
+	height: 200px;
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	overflow: hidden;
+	padding: 10px;
+}
+
+figure:hover+span {
+	bottom: -36px;
+	opacity: 1;
+}
+.hover01 figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover01 figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+/*end zoom*/
+
 /*  GRID OF THREE   ============================================================================= */
 .col_1_of_3{
 	display: block;
@@ -401,18 +485,19 @@ ul.last li a:hover{
 	-o-box-shadow:0 0 5px #aaa;
 }
 .span_1_of_3:hover{
-	background:#4CB1CA;
+	/*background:#4CB1CA;*/
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	-o-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 	color:#fff;
+	/*border:1px solid #000;*/
 }
 .span_1_of_3:hover p.title{
-	color: #FFF;
+	color: #4CB1CA;
 }
 .span_1_of_3:hover span.actual{
-	color: #FFF;
+	color: #4CB1CA;
 }
 
 .span_1_of_3:hover span.reducedfrom {
@@ -426,7 +511,7 @@ ul.last li a:hover{
 
 h2.head{
 	font-size: 1.7em;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	color: #777;
 	margin-bottom: 10px;
 }
@@ -437,6 +522,7 @@ h2.head{
 	padding:10px;
 	position: relative;
 }
+
 .product_image {
 	background: #fff;
 }
@@ -475,7 +561,7 @@ h2.head{
 	transform: rotate(45deg);
 	width: 140px;
 	z-index: 2;
-	text-transform:uppercase;
+	/*text-transform:uppercase;*/
 	border-bottom: 2px solid #2892AC;
 }
 .cart-left{
@@ -552,7 +638,7 @@ span.reducedfrom {
 	transform: rotate(-45deg);
 	width: 140px;
 	z-index: 2;
-	text-transform:uppercase;
+	/*text-transform:uppercase;*/
 	border-bottom: 2px solid #4CB1CA;
 }
 .top-box{
@@ -612,7 +698,7 @@ span.reducedfrom {
 }
 h2.m_1{
 	font-size: 1.7em;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	color: #777;
 	margin-bottom:15px;
 }
@@ -671,7 +757,7 @@ ul.f-list img{
 ul.f-list span.f-text {
 	float: left;
 	font-size: 1.5em;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	color: #FFF;
 	margin-top: 23px;
 }
@@ -694,7 +780,7 @@ ul.f-list span.f-text {
 	margin-bottom:20px;
 	font-size:1.5em;
 	line-height: 1.2;
-	text-transform:uppercase;
+	/*text-transform:uppercase;*/
 }
 .col_1_of_f_1{
 	display: block;
@@ -965,7 +1051,7 @@ h4.title{
 	font-weight: normal;
 	margin-top: 0px;
 	letter-spacing: -1px;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	border-bottom: 1px solid #DFDDDD;
 	padding-bottom: 13px;
 }
@@ -1448,7 +1534,7 @@ ul.dc_pagination li a:hover{
 /* WRAPPER */
 .dropdown{
 	position: relative;
-	width:120px;
+	width:135px;
 	cursor: pointer;
 	font-weight: 200;
 	background:none;
@@ -1614,7 +1700,7 @@ h5.m_1{
 	background: #F7F7F7;
 	margin:20px 0;
 	border: 1px solid #E6E6E6;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 ul.kids{
 	margin-bottom:20px;
@@ -1777,7 +1863,7 @@ ul.breadcrumb a:hover{
 h3.m_3{
 	color:#555;
 	font-size:1.2em;
-	text-transform:uppercase;
+	/*text-transform:uppercase;*/
 	margin-bottom:10px;
 }
 p.m_5{
@@ -1928,7 +2014,7 @@ h5.m_4 {
 h5.m_4 a{
 	font-size:0.85em;
 	color:#555;
-	text-transform:uppercase;
+	/*text-transform:uppercase;*/
 }
 h5.m_4 a:hover{
 	color:#000;
@@ -1986,7 +2072,7 @@ span.m_link a{
 	color:#555;
 	font-size:0.85em;
 	text-decoration:underline;
-	text-transform:uppercase;
+	/*text-transform:uppercase;*/
 }
 span.m_link a:hover{
 	text-decoration:none;
@@ -2016,7 +2102,7 @@ p.m_text2{
 	margin-bottom:0.5em;
 	font-size:1.4em;
 	line-height: 1.2;
-	text-transform:uppercase;
+	/*text-transform:uppercase;*/
 }
 .span_2_of_about p,
 .span_1_of_about  p  {
@@ -2095,7 +2181,7 @@ h5.m_6{
 	font-size: 1.4em;
 	line-height: 1.2;
 	font-weight: normal;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 /*  GRID OF THREE   ============================================================================= */
 .col_1_of_about-box{
@@ -2113,7 +2199,7 @@ h4.m_7{
 h4.m_7 a{
 	color:#555;
 	font-size:0.95em;
-	text-transform:uppercase;
+	/*text-transform:uppercase;*/
 }
 h4.m_7 a:hover{
 	color:#000;
@@ -2215,7 +2301,7 @@ ul.delivery-list li a:hover{
 /*--responsive design--*/
 @media (max-width:1366px){
 	.wrap{
-		width:90%;
+		width:75%;
 	}
 	#products .pagination li a {
 		width: 96px;
@@ -2228,10 +2314,11 @@ ul.delivery-list li a:hover{
 		width: 240px;
 	}
 	.search input[type="text"] {
-		width: 240px;
+		width: 255px;
+    	margin-top: 5px;
 	}
 	.search input[type="text"]:focus {
-		width: 240px;
+		width: 255px;
 	}
 	.like_box {
 		width: 114%;
@@ -2271,7 +2358,7 @@ ul.delivery-list li a:hover{
 		width:47.2%;
 	}
 	.megamenu>li>a {
-		padding: 8px 5px;
+		padding: 8px 5px;	
 	}
 	.logo {
 		margin-right:0%;
@@ -2369,7 +2456,7 @@ ul.delivery-list li a:hover{
 		float: none;
 	}
 	.search {
-		margin: 5px 10px 0 0;
+		margin: 5px 10px 15px 0;
 	}
 	ul.last {
 		margin: 12px 0px 0 10px;
@@ -2477,7 +2564,7 @@ ul.delivery-list li a:hover{
 		float: none;
 	}
 	.search {
-		margin: 5px 10px 0 0;
+		margin: 5px 10px 15px 0;
 	}
 	ul.last {
 		margin: 12px 0px 0 10px;
@@ -2654,7 +2741,7 @@ ul.delivery-list li a:hover{
 		float: none;
 	}
 	.search {
-		margin: 5px 10px 0 0;
+		margin: 5px 10px 15px 0;
 	}
 	ul.last {
 		margin: 12px 0px 0 10px;
@@ -2821,7 +2908,7 @@ ul.delivery-list li a:hover{
 		float: none;
 	}
 	.search {
-		margin: 5px 10px 0 0;
+		margin: 5px 10px 15px 0;
 	}
 	ul.last {
 		margin: 12px 0px 0 10px;
@@ -3016,7 +3103,7 @@ ul.delivery-list li a:hover{
 		float: none;
 	}
 	.search {
-		margin: 5px 10px 0 0;
+		margin: 5px 10px 15px 0;
 	}
 	ul.last {
 		margin: 12px 0px 0 10px;

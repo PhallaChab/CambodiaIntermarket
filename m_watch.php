@@ -2,12 +2,11 @@
     include ("template/header.php");
     include ("models/products.php");
 ?>
-
     <div class="main">
         <div class="wrap">
             <div class="slider_container">
                 <div class="slide">
-                    <img src="resources/images/banner4.png" alt=""/>
+                    <img src="resources/images/bannerw.jpg" alt=""/>
                 </div>
             </div>
             <div class="cont span_2_of_3">
@@ -17,7 +16,7 @@
                 ?>
                 <div class="top-box">
                 <?php
-                    $product =  Product::getHandbag();
+                    $product =  Product::getWatch();
                     foreach ($product as $pro){
                         echo "<div class='col_1_of_3 span_1_of_3'>
                             <a href='details.php?id=".$pro['pro_id']."'>

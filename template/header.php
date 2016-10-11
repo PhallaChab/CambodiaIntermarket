@@ -19,6 +19,7 @@
 			echo '<meta name="robots" content="' . $pageRobots . '">';
 		}
 	?>
+	<link rel="icon" type="image/gif/png" href="resources/images/logo1.jpg">
 	<meta name="google-site-verification" content="Ry4SC9lqacxjYGDI_lYE9LC_Kg6POipip5-QEJCG4ZA" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -101,9 +102,20 @@
 				 		</div>
 				    </div>
 			    </div>
-			    <div class="col-md-4">
+			    <div class="col-md-4" style="text-align:center;">
 				    <div class="row">
-				    	<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+				    	<div class="col-md-4 col-xs-2 styleicon">
+					    	<a href=""><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+					    	<p>My Basket</p></a>
+					    </div>
+					    <div class="col-md-4 col-xs-2 styleicon">
+					    	<a href=""><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+					    	<p>My Wishlist</p></a>
+					    </div>
+					    <div class="col-md-4 col-xs-2 styleicon">
+					    	<a href=""><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+					    	<p>My Account</p></a>
+					    </div>
 		            </div>
 			    </div>
 		    </div>

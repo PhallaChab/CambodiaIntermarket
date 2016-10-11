@@ -18,7 +18,7 @@
 		      	<div id='slider' class='nivoSlider'>
 		            <img src='resources/images/bannerh.jpg' alt='' />
 		           	<img src='resources/images/banner2.png' alt='' />
-		            <img src='resources/images/banner1.jpg' alt='' />
+		            <!-- <img src='resources/images/banner1.jpg' alt='' /> -->
 		            <img src='resources/images/bannerw.jpg' alt='' />
 
 		      	</div>
@@ -55,7 +55,7 @@
 				</div>			 						 			    
 		  	</div>
 			<div class='rsidebar span_1_of_left'>
-				<?php include ('template/home_right.php');?>
+				<?php include ('template/advertise.php');?>
 	    	</div>
 	   		<div class='clear'></div>
 		</div>

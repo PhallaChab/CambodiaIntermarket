@@ -30,9 +30,9 @@ class Product {
     //     return runQuery("select * from products where cat_id = 5");
     // }
 
-    // public static function getCosmetic(){
-    //     return runQuery("select * from products where cat_id = 6");
-    // }
+    public static function getPerfume(){
+        return runQuery("select * from products where cat_id = 6");
+    }
 
     // public static function getCosmetic(){
     //     return runQuery("select * from products where cat_id = 7");
@@ -50,6 +50,10 @@ class Product {
         }else{
             return "No";
         }
+    }
+    public static function getOrderName(){
+        $sql = "SELECT * FROM products ORDER BY pro_name";
+        return runQuery($sql);
     }
 }
 ?>

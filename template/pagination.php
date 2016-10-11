@@ -1,3 +1,4 @@
+
 <div class="mens-toolbar">
     <div class="sort">
         <div class="sort-by">
@@ -6,12 +7,13 @@
                 <option value="">
                     Type </option>
                 <option value="">
-                    Name </option>
+                    <a href='ordername.php'>Name</a> </option>
                 <option value="">
                     Price </option>
             </select>
         </div>
     </div>
+
     <div class="pager">
         <div class="limiter visible-desktop">
             <label>Show</label>

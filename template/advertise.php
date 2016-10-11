@@ -20,10 +20,10 @@
 	<div class='top-border'> </div>
 	<div class='sidebar-bottom'>
 	    <h2 class='m_1'>Newsletters<br> Signup</h2>
-	    <p class='m_text'>Lorem ipsum dolor sit amet, consectetuer</p>
+	    <p class='m_text'>signup with us to get new product when it comming.</p>
 	    <div class='subscribe'>
 			<form>
-			    <input name='userName' type='text' class='textbox'>
+			    <input name='email' type='text' class='textbox' placeholder="E-mail">
 			    <input type='submit' value='Subscribe'>
 			</form>
 		</div>

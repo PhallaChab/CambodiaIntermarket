@@ -32,6 +32,33 @@ body{
 	font-family: 'Exo 2', sans-serif;
 	background:#f7f7f7;
 }
+.styleicon span{
+	margin-top:7px;
+	font-size: 20px;
+	color: #3d3d3d;
+}
+.styleicon p{
+	font-family:"lucida grande", tahoma, verdana, arial, sans-serif;
+	font-size: 12px;
+}
+.styleicon a p{
+	color:#000;
+}
+.styleicon a p:hover, span:hover{
+	color:rgb(76, 177, 202);
+	text-decoration: none !important;
+}
+.imagedetail ul li{ 
+	width:80px;
+	margin-bottom:10px;
+}
+.imagedetail ul li:hover{
+	border:1px solid #000;
+}
+.p_title{
+	text-transform:uppercase;
+	text-decoration: underline;
+}
 /*banner image*/
 .bannerimg{
 	margin:30px 0 0 -30px;
@@ -397,7 +424,7 @@ ul.last li a:hover{
 .cont{
 	display: block;
 	float:left;
-	margin: 1% 0 1% 0;
+	margin: 5.4% 0 1% 0;
 }
 .rsidebar{
 	display: block;
@@ -750,6 +777,9 @@ p.m_text{
 .span_1_of_2 {
 	width:49.2%;
 }
+.span_2_of_2{
+	width:87.2%;
+}
 ul.f-list img{
 	float:left;
 	margin-right: 1.6%;
@@ -1022,7 +1052,7 @@ ul.f-list1 li a:hover {
 }
 /*--login--*/
 .login{
-	border-top:1px solid #ddd;
+	/*border-top:1px solid #ddd;*/
 	padding:2% 0;
 }
 .col_1_of_login:first-child {
@@ -1160,7 +1190,7 @@ table {
 	width: 100%;
 }
 .register_account{
-	border-top:1px solid #ddd;
+	/*border-top:1px solid #ddd;*/
 	padding:2% 0;
 }
 
@@ -2082,6 +2112,7 @@ p.m_text2{
 	font-size:0.85em;
 	line-height: 1.8em;
 	margin-top:20px;
+	text-align: justify;
 }
 /*--out--*/
 /*  GRID OF Content and sidebar   ============================================================================= */
@@ -2310,8 +2341,8 @@ ul.delivery-list li a:hover{
 		width: 47.9%;
 	}
 	span.rollover {
-		height: 205px;
-		width: 240px;
+		height: 240px;
+		width: 200px;
 	}
 	.search input[type="text"] {
 		width: 255px;

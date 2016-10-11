@@ -51,7 +51,7 @@
 				<div class='wrap'>
 		       		<h4 class="title">Registered Customers</h4>
 			        <form method='POST' action=''>
-			            <div class='col_1_of_2 span_1_of_2'>
+			            <div class='col_1_of_2 span_2_of_2'>
 			            <p style="color:red;"><?php echo $errLogin;?></p>
 			                <div><input type='text' name='email' value='' placeholder='E-mail' required></div>
 			                <div><input type='password' name='pass' value='' placeholder='Password' required></div>

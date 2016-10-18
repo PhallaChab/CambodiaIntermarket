@@ -1,24 +1,8 @@
 
 	<div class="footer">
-		<div class="footer-top">
-			<div class="wrap">
-			  <div class="section group example">
-				<div class="col_1_of_2 span_1_of_2">
-					<ul class="f-list">
-					  <li><img src="resources/images/2.png"><span class="f-text"><?php echo _t_order;?></span><div class="clear"></div></li>
-					</ul>
-				</div>
-				<div class="col_1_of_2 span_1_of_2">
-					<ul class="f-list">
-					  <li><img src="resources/images/3.png"><span class="f-text">Call us! +855 (0) 12 611 606</span><div class="clear"></div></li>
-					</ul>
-				</div>
-				<div class="clear"></div>
-		      </div>
-			</div>
-		</div>
-		<div class="footer-middle">
-			<div class="wrap">
+	<div class="footer-middle">
+	<div class='wrap'>
+		
 		   <div class="section group example">
 			  	<div class="col_1_of_f_1 span_1_of_f_1">
 				 	<div class="section group example">
@@ -75,18 +59,26 @@
 				 <div class="col_1_of_f_2 span_1_of_f_2">
 				   <h3><?php echo _t_contact;?></h3>
 						<div class="company_address">
-					        <p>Office A-8.01.02.03 (Ground floor), New Steng Mean Chey Market, Sangkat Steng Mean Chey, Khan Mean Chey, Phnom Penh</p>
-					   		<p>Office :(0) 23 644 17 17</p>
-					   		<p>Phone : (0) 12 611 606</p>
-					 	 	<p>Email: preapratha@cambodiaintermarket.com </p>
+					        <p><?php echo _t_france;?> : SAM SOKCHEA, 88B avenue Monzart, 75016 Paris France</p>
+					   		<p><?php echo _t_france;?> :(+33) 78 228 1638</p>
+					   		<p><?php echo _t_cambodia;?> : (+855) 88 812 1133 </p>
+					 	 	<p><?php echo _t_email;?>: preapratha@cambodiaintermarket.com </p>
 					   		
 					   </div>
 					   <div class="social-media">
-						     <ul>
-						        <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="Google"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Twitter"><a href="https://twitter.com/C_Intermarket?lang=en" target="_blank"> </a> </span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Instagram"><a href="https://www.instagram.com/cambodia_intermarket/" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Facebook"><a href="https://www.facebook.com/CambodiaIntermarket/" target="_blank"> </a></span></li>
+						    <ul>
+						        <li> 
+						        	<span class="simptip-position-bottom simptip-movable" data-tooltip="Google"><a href="#" target="_blank"> </a></span>
+						        </li>
+						        <li>
+						        	<span class="simptip-position-bottom simptip-movable" data-tooltip="Twitter"><a href="https://twitter.com/C_Intermarket?lang=en" target="_blank"> </a> </span>
+						        </li>
+						        <li>
+						        	<span class="simptip-position-bottom simptip-movable" data-tooltip="Instagram"><a href="https://www.instagram.com/cambodia_intermarket/" target="_blank"> </a></span>
+						        </li>
+						        <li>
+						        	<span class="simptip-position-bottom simptip-movable" data-tooltip="Facebook"><a href="https://www.facebook.com/CambodiaIntermarket/" target="_blank"> </a></span>
+						        </li>
 						    </ul>
 					   </div>
 				</div>
@@ -94,26 +86,9 @@
 		    </div>
 		   </div>
 		  <div class="clear"></div>
-		    </div>
 		  </div>
-		</div>
-		<div class="footer-bottom">
-			<div class="wrap">
-	            <!--  <div class="copy">
-			        <p>© 2014 Template by <a href="http://w3layouts.com" target="_blank">w3layouts</a></p>
-		         </div>
-				<div class="f-list2">
-				 <ul>
-					<li class="active"><a href="about.html">About Us</a></li> |
-					<li><a href="delivery.html">Delivery & Returns</a></li> |
-					<li><a href="delivery.html">Terms & Conditions</a></li> |
-					<li><a href="contact.html">Contact Us</a></li> 
-				 </ul>
-			    </div>
-			    <div class="clear"></div>
-		      </div> -->
-	     </div>
 	</div>
-
+</div>
+</div>
 </body>
 </html>

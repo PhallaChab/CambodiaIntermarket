@@ -25,12 +25,11 @@
 		    </div>
 		</div>
 		
-		<div class='section group'>
+		<div class='section group col-lg-12'>
 		  	<div class='cont span_2_of_3'>
-			  	<h2 class='head'><?php echo _t_justarr;?></h2>
 				<div class='top-box hover01'>
 					<?php
-						$product =  Product::getProducts();
+						/*$product =  Product::getProducts();
 						foreach ($product as $pro){
 							echo "<div class='col_1_of_3 span_1_of_3'>
 							 		<a href='details.php?id=".$pro['pro_id']."'>
@@ -50,35 +49,108 @@
 					                </div>
 			                   	</a>
 							</div>";
-						}
+						}*/
 					?>
 				</div>			 						 			    
 		  	</div>
-			<div class='rsidebar span_1_of_left'>
-				<?php include ('template/advertise.php');?>
-	    	</div>
 	   		<div class='clear'></div>
 		</div>
-		<div class='clear'></div>
-		<div class="col-md-12 bannerimg">
-			<a href="">
-				<div class="col-md-8">
-					<img src="resources/images/man.jpg">
-				</div>
-			</a>
-			<a href="">
-				<div class="col-md-4">
-					<img src="resources/images/watch-man.jpg" class="small">
-				</div>
-			</a>
+		<div class="col-md-12">
+		<?php 
+			/*$product =  Product::getProducts();
+				foreach ($product as $pro){
+					echo "<a href='details.php?id=".$pro['pro_id']."'>
+						<div class='col-md-4 homestyle'>
+							<img src='uploads/".$pro['pro_image']."' class='small'>
+						</div>
+					</a>";
+				}*/
+			?>
 		</div>
 		<div class='clear'></div>
-		<div class='section group'>
+		<div class="col-md-12 col-xs-12 modeproduct">
+			<div class="staticWrapper">
+				<div class="col-md-6 col-xs-12 showhim">
+					<a href="">
+						<img src="resources/images/1.jpg" class="modeimg">
+						<div class="showme">
+							<p class="modename">Hello world</p>
+							<img src="resources/images/plus.jpg" class="plusimg">
+						</div>
+					</a>
+				</div>
+				<div class="col-md-6 col-xs-12 showhim">
+					<a href="">
+						<img src="resources/images/2.jpg" class="modeimg">
+						<div class="showme">
+							<p class="modename">Hello world</p>
+							<img src="resources/images/plus.jpg" class="plusimg">
+						</div>
+					</a>
+				</div>
+				<div class="col-md-6 col-xs-12 showhim">
+					<a href="">
+						<img src="resources/images/1.jpg" class="modeimg">
+						<div class="showme">
+							<p class="modename">Hello world</p>
+							<img src="resources/images/plus.jpg" class="plusimg">
+						</div>
+					</a>
+				</div>
+				<div class="col-md-6 col-xs-12 showhim">
+					<a href="">
+						<img src="resources/images/2.jpg" class="modeimg">
+						<div class="showme">
+							<p class="modename">Hello world</p>
+							<img src="resources/images/plus.jpg" class="plusimg">
+						</div>
+					</a>
+				</div>
+				<div class="col-md-6 col-xs-12 showhim">
+					<a href="">
+						<img src="resources/images/1.jpg" class="modeimg">
+						<div class="showme">
+							<p class="modename">Hello world</p>
+							<img src="resources/images/plus.jpg" class="plusimg">
+						</div>
+					</a>
+				</div>
+				<div class="col-md-6 col-xs-12 showhim">
+					<a href="">
+						<img src="resources/images/2.jpg" class="modeimg">
+						<div class="showme">
+							<p class="modename">Hello world</p>
+							<img src="resources/images/plus.jpg" class="plusimg">
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="bannerWrapper">
+			<div class="LazyLoad is-visible">
+				<div>
+					<div>
+			<a class="bannerInfoToggle" id="infoSalesPlusBtn_57664" style="top: 100%;"></a><a href="/ns/en-gb/operation/57664">
+			<picture>
+			<source srcset="https://vp-eu.scene7.com/is/image/vpeu/3/TPL_BRANDVISUAL_PICTO?$src=00_57664_EN_brandvisualbrandvisualmv1en&amp;qlt=93,1&amp;$anchor2=193,-65&amp;$picto2=72H_SMALL_ROSE_EN">
+			<img srcset="https://vp-eu.scene7.com/is/image/vpeu/3/TPL_BRANDVISUAL_PICTO?$src=00_57664_EN_brandvisualbrandvisualmv1en&amp;qlt=93,1&amp;$anchor2=193,-65&amp;$picto2=72H_SMALL_ROSE_EN" src="https://vp-eu.scene7.com/is/image/vpeu/3/TPL_BRANDVISUAL_PICTO?$src=00_57664_EN_brandvisualbrandvisualmv1en&amp;qlt=93,1&amp;$anchor2=193,-65&amp;$picto2=72H_SMALL_ROSE_EN">
+			</picture>
+			</a>
+			<div class="bannerInfoWrapper">
+			<div class="bannerInfoSummary">
+			<div>
+			<a class="bannerInfoDate" id="dateSales_57664" href="/ns/en-gb/operation/57664">
+			<span>Until&nbsp;<em>Friday&nbsp;21&nbsp;Oct&nbsp;(5am)</em>
+			</span
+			></a></div></div><a class="bannerInfoDesc" id="brandInfo_57664" href="/ns/en-gb/operation/57664">Since 1965, Emanuel Ungaro creates ready-to-wear collections for men, showcasing daring, provocative and gracious styles.</a><div class="bannerInfoFooter"><ul class="bannerInfoMore"><li><a class="icon-share-email-circle" href="/ns/vp4/Sponsorship/InvitationPopup.aspx?operationId=57664"><span>Share</span></a></li><li><a class="icon-mesalertes-circle" id="alertLink_57664" href="/ns/en-gb/operation/57664"><span>Create an alert</span></a></li><li><a class="icon-access" id="saleLink_57664" href="/ns/en-gb/operation/57664"><span>Access the sale</span></a></li></ul></div></div></div></div></div>
+		</div> -->
+		<div class='clear'></div>
+		<!-- <div class='section group'>
 			<div class="clients">
 	            <p style="text-align: center;font-size:25px;">Recommended Products</p>
 	            <ul id="flexiselDemo3" class="col-xs-6">
 	            <?php
-					$product =  Product::getProducts();
+					/*$product =  Product::getProducts();
 					foreach ($product as $pro){
 						echo "<li>
 			                	<img src='uploads/".$pro['pro_image']."' />
@@ -87,7 +159,7 @@
 			                	</div>
 			                    <p>$".$pro['pro_price']."</p>
 			                </li>";
-					}
+					}*/
 				?>
 	            </ul>
 	            <script type="text/javascript">
@@ -138,7 +210,7 @@
 	            </script>
 	        </div>
 	   	<div class='clear'></div>
-		</div>
+		</div> -->
 	</div>
 </div>
 <?php

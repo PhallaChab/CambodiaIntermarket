@@ -1,7 +1,7 @@
 <?php
+    include ("authorization.php");
     include ('../models/admin.php');
-    
-    
+
     $postSuceess="";
     if(isset($_POST['post'])){
         $pname = $_POST['name'];
@@ -20,7 +20,8 @@
             echo "This file not respond because it is not file image.";
             $yes = 0;
         }else{
-            $to = "C:/xampp/htdocs/CambodiaIntermarket/uploads/".$_FILES['image']['name'];
+            $to = "../uploads/".$_FILES['image']['name'];
+            echo "Hello path ".$to;
             move_uploaded_file($_FILES['image']['tmp_name'],$to);
             $insert_product = Products::insert($pname,$pprice,$pcode,$pcat,$pimage,$deskh,$desen,$pinfor,$date);
             $postSuceess="You have successfull post product. <br/><a href='listproducts.php'>Go to ListProduct</a>";
@@ -30,7 +31,7 @@
 ?>
 <div id="wrapper">    
     <?php 
-        include ("../template/menu_admin.php");
+        include ("menu_admin.php");
     ?>
     <div id="page-wrapper">
         <div class="container-fluid">

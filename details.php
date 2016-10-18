@@ -64,15 +64,9 @@
         <div class="wrap">
             <ul class="breadcrumb breadcrumb__t">
                 <a class="home" href="index.php">Home</a> / 
-                <a href="#">Details</a>
+                <b>Details</b>
             </ul>
-            <div class="col-md-12">
-                <img src="resources/images/hauwei.gif"/>
-            </div>
-            <div class="cont span_2_of_3">
-            	<?php
-            		
-				?>
+            <div class="cont col-lg-12">
                 <div class="grid images_3_of_2" >
                     <ul id="etalage">
                         <li style="background: #f7f7f7;border: none;">
@@ -86,20 +80,13 @@
 	            </div>
                 <div class='desc1 span_3_of_2'>
                     <h3 class='m_3 p_title'><?php echo $pname;?><h3>
-               		<p class='m_5'>Price: $ <?php echo $pprice;?></p>
-                    <div class='toogle'>
-                    	<h3 class='m_3'>Product Description</h3>
-                    	<p class='m_text2'><?php echo $disc;?></p>
-                        <p>I want buy this product <a href="">Chat Here</a></p>
-                	</div>
+               		<p class='m_5'><?php echo _t_price; echo $pprice;?></p>
+                    <a href="#toogle"><?php echo _t_readmore;?></a>
+                    <p><button class="black"><?php echo _t_addbasket;?></button></p>
+                    <a href=""><span class="glyphicon glyphicon-heart heartdetail" aria-hidden="true"></span></a>
 	            </div>
-                <div class='clear'></div>
-                    <div class='toogle'>
-                    <h3 class='m_3'>Product Information</h3>
-                    <p class='m_text'><?php echo $pinfor?></p>
-                </div>
                 <div class="clearfix"></div>
-                <div class="clients">
+                <!-- <div class="clients">
                     <h3 class="m_3">Products in the same category</h3>
                     <ul id="flexiselDemo3" class="col-xs-6">
                         <li><img src="resources/images/s5.jpg" /><a href="#">Glass</a>
@@ -164,11 +151,60 @@
 
                     });
                     </script>
+                </div> -->
+            </div>
+            <div class="col-lg-12">
+                <div style="height:120px"></div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-lg-12">
+                <div class="col-lg-6">
+                    <div id='toogle'>
+                        <h3 class='m_3'><?php echo _t_description;?></h3>
+                        <p class='m_text2'><?php echo $disc;?></p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img class='' src='uploads/<?php echo $pimage;?>' class='img-responsive' />
                 </div>
             </div>
-            <div class='rsidebar span_1_of_left'>
-                <?php include ("template/advertise.php");?>
+            <div class="col-lg-12">
+                <div style="height:50px"></div>
             </div>
+            <div class="col-lg-12">
+                <div class="col-lg-4">
+                    <ul class="f-list">
+                        <li>
+                            <img src="resources/images/2.png">
+                            <span class="f-text"><?php echo _t_order;?></span>
+                            <div class="clear"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <ul class="f-list">
+                        <li>
+                            <img src="resources/images/3.png">
+                            <span class="f-text"><?php echo _t_return;?></span>
+                            <div class="clear"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <ul class="f-list">
+                        <li>
+                            <img src="resources/images/2.png">
+                            <span class="f-text"><?php echo _t_payment;?></span>
+                            <div class="clear"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div style="height:50px"></div>
     </div>
     <div class="clear"></div>
 

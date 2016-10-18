@@ -1,4 +1,7 @@
-<?php 
+<?php
+    include ("authorization.php");
+    $db = mysqli_connect("localhost","cambodiaintermarket_com","nDxfgjvd","cambodiaintermarket_com");
+    mysqli_query ( $db,"set character_set_results='utf8'" );
     include ('../models/admin.php');
 ?>
 <style type="text/css">
@@ -10,7 +13,7 @@
 </style>
 
 <div id="wrapper">
-    <?php include ("../template/menu_admin.php");?>
+    <?php include("menu_admin.php");?>
     <div id="page-wrapper">
         <div class="container-fluid">
             <div class="row">

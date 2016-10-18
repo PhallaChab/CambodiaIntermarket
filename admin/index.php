@@ -1,12 +1,10 @@
-
 <?php
-    include ('../models/admin.php');
-    include ("../config/config.php");
+    include ("authorization.php");
 ?>
 
 <div id="wrapper">    
     <?php 
-        include ("../template/menu_admin.php");
+        include ("menu_admin.php");
     ?>
     <div id="page-wrapper">
         <div class="container-fluid">

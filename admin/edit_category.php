@@ -1,4 +1,5 @@
 <?php
+    include ("authorization.php");
     include ("../models/category.php");
 
     if (isset($_GET['id']) && is_numeric($_GET['id']) && $_GET['id'] > 0){

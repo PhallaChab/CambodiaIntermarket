@@ -2,19 +2,19 @@
 	include ("../admin/import.php");
     session_start();
 
-    // if ($_SESSION['login_user']!='Undefined' && $_SESSION['rerole']!="admin") {
-    //     header("location: ".URL."login.php");
-    // }
-    if(isset($_SESSION['login_user']) && $_SESSION['rerole']=="user"){
-        // login as normal user
-        header("location:".URL);
-    } else if(isset($_SESSION['login_user']) && $_SESSION['rerole']=="admin"){
-        // login as admin
-        echo "you are admin";
-    }else{
-        // user not login yet
-        header("location:".URL."login.php");
+    if ($_SESSION['login_user']!='Undefined' && $_SESSION['rerole']!="admin") {
+        header("location: ".URL."login.php");
     }
+    // if(isset($_SESSION['login_user']) && $_SESSION['rerole']=="user"){
+    //     // login as normal user
+    //     header("location:".URL);
+    // } else if(isset($_SESSION['login_user']) && $_SESSION['rerole']=="admin"){
+    //     // login as admin
+    //     //echo "you are admin";
+    // }else{
+    //     // user not login yet
+    //     header("location:".URL."login.php");
+    // }
 ?>
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -25,7 +25,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">CIM Admin</a>
+        <a class="navbar-brand" href="..\">CIM Admin</a>
     </div>
     <ul class="nav navbar-right top-nav">
         <li class="dropdown">

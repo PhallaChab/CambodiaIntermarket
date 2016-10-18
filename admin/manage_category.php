@@ -1,4 +1,5 @@
 <?php
+    include ("authorization.php");
     include ("../models/category.php");
     if(isset($_POST['submit'])){
         $cat_name = $_POST['name'];
@@ -14,7 +15,7 @@
 
 <div id="wrapper">    
     <?php 
-        include ("../template/menu_admin.php");
+        include ("menu_admin.php");
     ?>
     <div id="page-wrapper">
         <div class="container-fluid">
@@ -38,7 +39,7 @@
                     <div class="col-lg-6">
                         <div class="form-group">
                             <div class="col-xs-10">
-                                <label>Product Name</label>
+                                <label>Category Name</label>
                                 <input class="form-control" name="name" required>
                             </div>
                         </div>

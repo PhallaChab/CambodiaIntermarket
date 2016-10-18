@@ -44,13 +44,13 @@
 			<div class="header-top-left">
 			  	   <div class="box dropdown">
 						<a href="lang/switch_lang.php?lang=2" style="color:#fff;">English</a> | 
-						<a href="lang/switch_lang.php?lang=1" style="color:#fff;">ភាសាខ្មែរ</a>
+						<a href="lang/switch_lang.php?lang=1" style="color:#fff;font-size:13px;">ភាសាខ្មែរ</a>
    				    </div>
    				    <div class="box1">
    				    <?php
 	   				    if(isset($_SESSION['login_user'])=='Undefined'){
 	   				        echo "<select tabindex='4' class='dropdown'>";
-									echo "<option value='' class='label' value=''>Welcom :".$_SESSION['login_user']."</option>
+									echo "<option value='' class='label' value=''> "._t_welcome." ".$_SESSION['login_user']."</option>
 									</select>";
 						}else{
 	   				        echo "";
@@ -80,7 +80,8 @@
 			    <div class="col-md-4">
 				    <div class="row">
 				    	<a href="index.php">
-							<img src="resources/images/logo.png" alt="" style="width: 280px;" />
+							<!-- <img src="resources/images/logo.png" alt="" style="width: 280px;" /> -->
+							<p class="logotext">Cambodia Intermarket</p>
 						</a>
 				    </div>
 			    </div>
@@ -104,17 +105,17 @@
 			    </div>
 			    <div class="col-md-4" style="text-align:center;">
 				    <div class="row">
-				    	<div class="col-md-4 col-xs-2 styleicon">
+				    	<div class="col-md-4 col-xs-4 styleicon">
 					    	<a href=""><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-					    	<p>My Basket</p></a>
+					    	<p><?php echo _t_basket;?></p></a>
 					    </div>
-					    <div class="col-md-4 col-xs-2 styleicon">
+					    <div class="col-md-4 col-xs-4 styleicon">
 					    	<a href=""><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-					    	<p>My Wishlist</p></a>
+					    	<p><?php echo _t_wishlist;?></p></a>
 					    </div>
-					    <div class="col-md-4 col-xs-2 styleicon">
+					    <div class="col-md-4 col-xs-4 styleicon">
 					    	<a href=""><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-					    	<p>My Account</p></a>
+					    	<p><?php echo _t_account;?></p></a>
 					    </div>
 		            </div>
 			    </div>
@@ -128,17 +129,13 @@
 						    <a href="#" class="dropbtn"><?php echo _t_woman;?></a>
 						    <div class="dropdown-content">
 							    <ul class="col-md-12 submenu">
-								    <li class="col-md-4">
+								    <li>
+								    	<a href=""><?php echo _t_new;?></a>
 								      	<a href="<?php echo URL."cosmetic.php"; ?>"><?php echo _t_cosmetic;?></a>
 								      	<a href="<?php echo URL."perfume.php"; ?>"><?php echo _t_perfume;?></a>
 								      	<a href="<?php echo URL."handbag.php"; ?>"><?php echo _t_bag;?></a>
 								      	<a href="<?php echo URL."glassess.php"; ?>"><?php echo _t_glass;?></a>
 								      	<a href="<?php echo URL."w_watch.php"; ?>"><?php echo _t_watch;?></a>
-								    </li>
-								    <li class="col-md-4">
-								    </li>
-								    <li class="col-md-4">
-								      	<img src="resources/images/s2.jpg">
 								    </li>
 							    </ul>
 						    </div>
@@ -147,16 +144,12 @@
 							<a class="dropbtn" href="#"><?php echo _t_man;?></a>
 							<div class="dropdown-content">
 							    <ul class="col-md-12 submenu">
-								    <li class="col-md-4">
+								    <li>
+								    	<a href=""><?php echo _t_new;?></a>
 								    	<a href="<?php echo URL."m_belt.php"; ?>"><?php echo _t_belt; ?></a>
 								      	<a href="<?php echo URL."glassess.php"; ?>"><?php echo _t_glass;?></a>
 								      	<a href="<?php echo URL."m_watch.php"; ?>"><?php echo _t_watch;?></a>
 								      	<a href="<?php echo URL."perfume.php"; ?>"><?php echo _t_perfume;?></a>
-								    </li>
-								    <li class="col-md-4">
-								    </li>
-								    <li class="col-md-4">
-								      	<img src="resources/images/s1.jpg">
 								    </li>
 							    </ul>
 						    </div>
@@ -168,13 +161,9 @@
 							<a class="dropbtn" href="#"><?php echo _t_house;?></a>
 							<div class="dropdown-content">
 							    <ul class="col-md-12 submenu">
-								    <li class="col-md-4">
+								    <li>
+								    	<a href=""><?php echo _t_new;?></a>
 								      	<a href="<?php echo URL."siren.php"; ?>"><?php echo _t_siren;?></a>
-								    </li>
-								    <li class="col-md-4">
-								    </li>
-								    <li class="col-md-4">
-								      	<img src="resources/images/sedea.jpg">
 								    </li>
 							    </ul>
 						    </div>

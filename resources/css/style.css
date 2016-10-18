@@ -32,6 +32,7 @@ body{
 	font-family: 'Exo 2', sans-serif;
 	background:#f7f7f7;
 }
+
 .dropdown a:hover{
 	font-weight: bold;
 }
@@ -183,6 +184,10 @@ a>p.logotext:hover{
 .header-top{
 	/*background:#4cb1ca;*/
 	background: orange;
+	position: fixed;
+    z-index: 9999;
+    width: 100%;
+    top: 0px;
 }
 .header-top-left{
 	width:54.5%;
@@ -216,6 +221,11 @@ a>p.logotext:hover{
 .header-bottom{
 	background:#f7f7f7;
 	padding:2% 0;
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+	top: 50px;
+	height: 154px;
 }
 .logo{
 	float:left;
@@ -510,6 +520,7 @@ ul.last li a:hover{
 /*  GRID OF Content and sidebar   ============================================================================= */
 .main{
 	margin:2% 0;
+	margin-top:220px;
 }
 .cont{
 	display: block;
@@ -2580,6 +2591,10 @@ ul.delivery-list li a:hover{
 	.wrap{
 		width:90%;
 	}
+	div.showhim {
+	    height: 160px;
+	    left:0px;
+	}
 	#products .pagination li a {
 		width:89px;
 	}
@@ -2680,6 +2695,10 @@ ul.delivery-list li a:hover{
 @media (max-width:768px){
 	.wrap{
 		width:97%;
+	}
+	div.showhim {
+	    height: 160px;
+	    left:0px;
 	}
 	#products .pagination li a {
 		width:89px;
@@ -2861,6 +2880,10 @@ ul.delivery-list li a:hover{
 	#products .pagination li a {
 		width:89px;
 	}
+	div.showhim {
+	    height: 160px;
+	    left:0px;
+	}
 	.header-bottom-right {
 		width: 100%;
 		float: none;
@@ -3027,6 +3050,10 @@ ul.delivery-list li a:hover{
 @media (max-width:480px){
 	#products .pagination li a {
 		width:89px;
+	}
+	div.showhim {
+	    height: 160px;
+	    left:0px;
 	}
 	.header-bottom-right {
 		width: 100%;
@@ -3223,7 +3250,10 @@ ul.delivery-list li a:hover{
 	#products .pagination li a {
 		width:89px;
 	}
-
+	div.showhim {
+	    height: 160px;
+	    left:0px;
+	}
 	.header-bottom-right {
 		width: 100%;
 		float: none;

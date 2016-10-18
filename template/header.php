@@ -39,7 +39,25 @@
     <script src="resources/js/jquery.etalage.min.js"></script>
 	<script src="resources/js/jquery.easydropdown.js"></script>
 </head>
-<div class="header-top">
+<!-- <div class="header-top">
+   	<div class="col-lg-12 col-xs-12"> 
+	  	<div class="col-xs-4">
+			<a href="lang/switch_lang.php?lang=2" style="color:#fff;">English</a> | 
+			<a href="lang/switch_lang.php?lang=1" style="color:#fff;font-size:13px;">ភាសាខ្មែរ</a>
+		</div>
+		<div class="col-xs-4">
+		    <p>Welcom: Phalla</p>
+		</div>
+		<div class="col-xs-4">
+			<ul>
+				<li><a href="">Login</a></li> |
+				<li><a href="">Logout</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div> -->
+	<div class="header-top">
 	   <div class="wrap"> 
 			<div class="header-top-left">
 			  	   <div class="box dropdown">

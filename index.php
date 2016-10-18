@@ -72,7 +72,7 @@
 			<div class="staticWrapper">
 				<div class="col-md-6 col-xs-12 showhim">
 					<a href="">
-						<img src="resources/images/1.jpg" class="modeimg">
+						<img src="resources/images/garnierbanner.jpg" class="modeimg">
 						<div class="showme">
 							<p class="modename">Hello world</p>
 							<img src="resources/images/plus.jpg" class="plusimg">
@@ -81,7 +81,7 @@
 				</div>
 				<div class="col-md-6 col-xs-12 showhim">
 					<a href="">
-						<img src="resources/images/2.jpg" class="modeimg">
+						<img src="resources/images/evoludermbanner.jpg" class="modeimg">
 						<div class="showme">
 							<p class="modename">Hello world</p>
 							<img src="resources/images/plus.jpg" class="plusimg">
@@ -90,7 +90,7 @@
 				</div>
 				<div class="col-md-6 col-xs-12 showhim">
 					<a href="">
-						<img src="resources/images/1.jpg" class="modeimg">
+						<img src="resources/images/raybanbanner.jpg" class="modeimg">
 						<div class="showme">
 							<p class="modename">Hello world</p>
 							<img src="resources/images/plus.jpg" class="plusimg">

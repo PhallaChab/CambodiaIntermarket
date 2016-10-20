@@ -3,7 +3,7 @@ include ("include/functions.php");
 // Product class is used instead of above four get product by category functions
 class Product {
     public static function getProducts(){
-        return runQuery("select * from products");
+        return runQuery("select * from products ORDER BY create_date DESC LIMIT 9");
     }
 
     public static function getProductImage($id){

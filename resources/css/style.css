@@ -45,6 +45,7 @@ body{
 	position: relative;
     z-index: 2;
     height: 100%;
+    margin-top:25px;
 }
 .showme .plusimg{
 	/*margin-top:140px;*/
@@ -62,10 +63,46 @@ body{
     background-repeat: no-repeat;
     transition: background .25s ease-in-out;
     min-height: 1293px;
-    padding-bottom: 655px;
+    padding-bottom: 445px;
     background-color: #ede7ab;
 }
 
+
+.homestyle{
+	height: 325px;
+	z-index:0;
+}
+.homestyle:hover .showdiv{
+	display: block;
+}
+.showdiv{
+	display: none;
+}
+.showdiv{
+	height: 65px;
+    width: 300px;
+    margin-left: -3px;
+    background-color: rgba(247, 247, 247, 0.48);
+    margin-top: 235px;
+    z-index: 9999;
+}
+.homestyle img.small{
+    position: absolute;
+    width: 0px;
+    left:12px;
+    z-index: -1;
+}
+.productname{
+	font-weight: bold;
+	color:#000;
+	font-style: 12px;
+	text-align: center;
+	white-space: nowrap;
+    width: 18em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/*=====*/
 .modename{
 	color:#555;
 	margin-left:10px;
@@ -99,6 +136,7 @@ div.showhim{
 .heartdetail{
 	margin-left: 40px;
     font-size: 35px;
+    margin-top:20px;
 }
 .heartdetail:hover{
 	color:#555 !important;
@@ -187,7 +225,8 @@ a>p.logotext:hover{
 	position: fixed;
     z-index: 9999;
     width: 100%;
-    top: 0px;
+    top: -5px;
+    height: 43px;
 }
 .header-top-left{
 	width:54.5%;
@@ -221,11 +260,11 @@ a>p.logotext:hover{
 .header-bottom{
 	background:#f7f7f7;
 	padding:2% 0;
-	position: fixed;
+	margin-top: 68px;
+	/*position: fixed;
 	width: 100%;
 	z-index: 9999;
-	top: 50px;
-	height: 154px;
+	height: 154px;*/
 }
 .logo{
 	float:left;
@@ -520,7 +559,7 @@ ul.last li a:hover{
 /*  GRID OF Content and sidebar   ============================================================================= */
 .main{
 	margin:2% 0;
-	margin-top:220px;
+	/*margin-top:220px;*/
 }
 .cont{
 	display: block;
@@ -1369,6 +1408,7 @@ button.grey:hover {
 	color: #FFF;
 }
 button.black{
+	margin-top:20px;
 	display: inline-block;
     text-decoration: none;
     cursor: pointer;
@@ -2591,6 +2631,9 @@ ul.delivery-list li a:hover{
 	.wrap{
 		width:90%;
 	}
+	.header-top{
+		height: 90px;
+	}
 	div.showhim {
 	    height: 160px;
 	    left:0px;
@@ -2695,6 +2738,9 @@ ul.delivery-list li a:hover{
 @media (max-width:768px){
 	.wrap{
 		width:97%;
+	}
+	.header-top{
+		height: 90px;
 	}
 	div.showhim {
 	    height: 160px;
@@ -2880,6 +2926,9 @@ ul.delivery-list li a:hover{
 	#products .pagination li a {
 		width:89px;
 	}
+	.header-top{
+		height: 90px;
+	}
 	div.showhim {
 	    height: 160px;
 	    left:0px;
@@ -3050,6 +3099,9 @@ ul.delivery-list li a:hover{
 @media (max-width:480px){
 	#products .pagination li a {
 		width:89px;
+	}
+	.header-top{
+		height: 90px;
 	}
 	div.showhim {
 	    height: 160px;
@@ -3249,6 +3301,9 @@ ul.delivery-list li a:hover{
 @media (max-width:320px){
 	#products .pagination li a {
 		width:89px;
+	}
+	.header-top{
+		height: 90px;
 	}
 	div.showhim {
 	    height: 160px;

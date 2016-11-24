@@ -19,6 +19,6 @@
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../resources/js/image_upload_previewer.js"></script>
-<script type="text/javascript" src="../resources/js/fixed_table.js"></script>
+<script type="text/javascript" src="js/image_upload_previewer.js"></script>
+<script type="text/javascript" src="js/fixed_table.js"></script>
 <!-- <script type="text/javascript" src="../resources/js/jquery1.min.js"></script> -->

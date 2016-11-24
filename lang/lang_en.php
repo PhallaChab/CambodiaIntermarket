@@ -5,12 +5,12 @@
 	define("_t_belt", "Belt");
 	define("_t_child", "Children");
 	define("_t_house", "House");
-	define("_t_glass", "Sun Glassess");
+	define("_t_glass", "Sunglass");
 	define("_t_watch", "Watch");
 	define("_t_bag", "Hand Bag");
 	define("_t_cosmetic", "Cosmetic");
 	define("_t_perfume", "Perfume");
-	define("_t_siren", "Siren");
+	define("_t_siren", "Smoke Detector");
 	define("_t_login", "Log In");
 	define("_t_logout", "Log Out");
 	define("_t_signup", "Sing Up");
@@ -28,6 +28,7 @@
 	define("_t_order","Free shipping order");
 	define("_t_title", "Cambodia Intermarket");
 	define("_t_aboutcim", "Cambodia Intermarket is a leading online shopping offering a huge range of product from fashion to cosmetic. With Cambodia intermarket you can shop for brand bag, sunglasses to skin care product, cosmetic and perfume originally shipped direct from France. Our goal is to change your online shopping experience with our best quality product, stunning price, fast delivery and dedicated professional service.");
+	define("_t_register", "You are new costomers, so need to be register with us. If you want to know more about our product, you can chat with us, we will guide with the quality product from France. Make new account with us today.");
 	define("_t_france", "France");
 	define("_t_cambodia", "Cambodia");
 	define("_t_phone", "Phone");
@@ -39,6 +40,21 @@
 	define("_t_wishlist", "My Wishlist");
 	define("_t_account", "My Account");
 	define("_t_welcome", "Welcome :");
-
-
+	define("_t_pass", "Password");
+	define("_t_newacc", "Create new account");
+	define("_t_newcus", "New Customer");
+	define("_t_regcus", "Register Customer");
+	define("_t_name", "User Name");
+	define("_t_companyname", "Campany Name");
+	define("_t_address", "Address");
+	define("_t_phonenum", "Phone Number");
+	define("_t_hotline", "Hotline");
+	define("_t_subtotal", "Subtotal");
+	define("_t_emtywish", "Empty Wishlist");
+	define("_t_clarwish", "Clear all");
+	define("_t_emtycard", "Empty Cart");
+	define("_t_clearcard", "Clear all");
+	define("_t_countinue", "Continue Shopping");
+	define("_t_backpack","BackPack");
+	define("_t_shopping","Shopping Cart");
 ?>

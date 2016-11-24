@@ -1,5 +1,5 @@
 <?php
-    include ('include/functions.php');
+    include ('../include/functions.php');
   // User class is used instead of above two user functions
     class User {
         public static function login($email,$password){
@@ -26,6 +26,12 @@
                     return "already";
                 }
             }
+        }
+        public static function getUserProfile($id){
+            return runQuery("SELECT * from users where userid = ".$id);
+        }
+        public static function getUser(){
+            return runQuery("SELECT * from users");
         }
     }
 ?>

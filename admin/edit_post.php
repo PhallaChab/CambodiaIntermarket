@@ -1,11 +1,16 @@
 <?php
+    $db = mysqli_connect("localhost","root","","cambointermarket");
+    mysqli_query ( $db,"set character_set_results='utf8'" );
+
     include ("authorization.php");
     include ('../models/admin.php');
 
     if (isset($_GET['id']) && is_numeric($_GET['id']) && $_GET['id'] > 0){
         $id = $_GET['id'];
-        $select= Products::getProductByid($id);
-        $row = mysqli_fetch_array($select);
+
+        $select= "SELECT products.*, category.cat_name from products inner join category on products.cat_id=category.cat_id where pro_id=".$id;
+        $query = mysqli_query($db,$select);
+        $row = mysqli_fetch_array($query);
         if($row){
             $cat_name = $row['cat_name'];
             $cat_id = $row['cat_id'];
@@ -18,12 +23,11 @@
             $desen = $row['pro_descriptionEn'];
             $pinfor = $row['pro_information'];
             $_SESSION['img']= $row['pro_image'];
+            
         }else{
-            echo "No results!";
-        }
-    }else{
         // if the 'id' in the URL isn't valid, or if there is no 'id' value, display an error
-        echo 'Error!';
+            echo 'Error!';
+        }
     }
 
     if (isset($_POST['edit'])){
@@ -56,7 +60,7 @@
 
 <div id="wrapper">    
     <?php 
-        include ("../template/menu_admin.php");
+        include ("menu_admin.php");
     ?>
     <div id="page-wrapper">
         <div class="container-fluid">

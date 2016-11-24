@@ -3,6 +3,8 @@
     include ('../models/admin.php');
 
     $postSuceess="";
+    $codeErr="";
+
     if(isset($_POST['post'])){
         $pname = $_POST['name'];
         $pprice = $_POST['price'];
@@ -13,19 +15,28 @@
         $deskh = $_POST['desKh'];
         $desen = $_POST['desEn'];
         $pinfor = $_POST['desInfo'];
-        $date = date("Y/m/d");
+        $date = date("Y/m/d H:i:s");
         $yes = 1;
         
+        $checkCode = Products::checkCode($pcode);
+        if($checkCode=='already'){
+            $codeErr = "Product Code has already added.";
+        }else{
+            echo "";
+        }
+
         if($type != "png" && $type != "jpg" && $type != "jpeg"){
             echo "This file not respond because it is not file image.";
             $yes = 0;
         }else{
-            $to = "../uploads/".$_FILES['image']['name'];
-            echo "Hello path ".$to;
-            move_uploaded_file($_FILES['image']['tmp_name'],$to);
-            $insert_product = Products::insert($pname,$pprice,$pcode,$pcat,$pimage,$deskh,$desen,$pinfor,$date);
-            $postSuceess="You have successfull post product. <br/><a href='listproducts.php'>Go to ListProduct</a>";
-            $yes=1;
+            if($checkCode!='already'){
+                $to = "../uploads/".$_FILES['image']['name'];
+                echo "Hello path ".$to;
+                move_uploaded_file($_FILES['image']['tmp_name'],$to);
+                $insert_product = Products::insert($pname,$pprice,$pcode,$pcat,$pimage,$deskh,$desen,$pinfor,$date);
+                $postSuceess="You have successfull post product. <br/><a href='listproducts.php'>Go to ListProduct</a>";
+                $yes=1;
+            }
         }
     }
 ?>
@@ -69,6 +80,7 @@
                             <div class="col-xs-10">
                                 <label>Product Code</label>
                                 <input class="form-control" name="code">
+                                <p style="color:red;"><?php echo $codeErr;?></p>
                             </div>
                         </div>
                         
@@ -105,13 +117,13 @@
                         <div class="form-group">
                             <div class="col-xs-10">
                                 <label>Khmer Description</label>
-                                <textarea class="form-control" rows="3" name="desKh" required></textarea>
+                                <textarea class="form-control" rows="3" name="desKh"></textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-xs-10">
                                 <label>English Description</label>
-                                <textarea class="form-control" rows="3" name="desEn" required></textarea>
+                                <textarea class="form-control" rows="3" name="desEn"></textarea>
                             </div>
                         </div>
                         <div class="form-group">

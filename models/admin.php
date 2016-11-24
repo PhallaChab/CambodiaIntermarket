@@ -17,8 +17,7 @@ class Products {
     }
 
     public static function getProducts(){
-       // return runQuery("SELECT * from products");
-       return runQuery("select products.*, category.cat_name from products inner join category on products.cat_id=category.cat_id");
+       return runQuery("select products.*, category.cat_name from products inner join category on products.cat_id=category.cat_id ORDER BY create_date DESC");
    }
     public static function getProductByid($id){
         //return runQuery("SELECT * from products where pro_id = ".$id);
@@ -30,5 +29,15 @@ class Products {
     }
     public static function getCategoryId($id){
         return runQuery("SELECT * from category where cat_id=".$id);
+    }
+    public static function checkCode($pcode){
+        $select_code = "SELECT pro_code from products where pro_code = '".$pcode."'";
+        $query = runQuery($select_code);        
+        $a = mysqli_num_rows($query);
+        while($row = mysqli_fetch_array($query)){
+            if($row['pro_code'] == $pcode){
+                return "already";
+            }
+        }
     }
 }

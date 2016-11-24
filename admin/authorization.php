@@ -10,6 +10,6 @@
             header("location:".URL);
         }
     }else{
-        header("location:".URL."login.php");
+        header("location:".URL."views/login.php");
     }
 ?>

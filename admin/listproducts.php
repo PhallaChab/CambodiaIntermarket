@@ -1,7 +1,8 @@
 <?php
-    include ("authorization.php");
-    $db = mysqli_connect("localhost","cambodiaintermarket_com","nDxfgjvd","cambodiaintermarket_com");
+    $db = mysqli_connect("localhost","root","","cambointermarket");
     mysqli_query ( $db,"set character_set_results='utf8'" );
+
+    include ("authorization.php");
     include ('../models/admin.php');
 ?>
 <style type="text/css">
@@ -51,8 +52,12 @@
                             </thead>
                             <tbody>
                                 <?php
-                                $product =  Products::getProducts();
-                                    foreach($product as $pro){?>
+                                $select = "select products.*, category.cat_name from products inner join category on products.cat_id=category.cat_id ORDER BY create_date DESC";
+                                $query = mysqli_query($db,$select);
+                                $numrow = mysqli_num_rows($query);
+                                if($numrow>0){
+                                    foreach($query as $pro){
+                                        ?>
                                     <tr>
                                         <td scope="row"><?php echo $pro['pro_id'];?></td>
                                         <td><?php echo $pro['pro_name'];?></td>
@@ -67,7 +72,7 @@
                                             <a style="z-index:0; background:#4cb1ca;border:1px #4cb1ca;" href='edit_post.php?id=<?php echo $pro['pro_id'];?>' class="btn btn-success">Edit</a>
                                             <a style="z-index:0;" href="delete_post.php?id=<?php echo $pro['pro_id'];?>" onclick="return confirm('You want to delete product?')" class="btn btn-danger">Delete</a></td>
                                     </tr>
-                                <?php }?>
+                                <?php }}?>
                             </tbody>
                         </table>
                         <div id="bottom_anchor"></div>

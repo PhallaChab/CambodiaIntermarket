@@ -59,7 +59,7 @@
 		        	<td>
 		        		<p><?php echo $product_info[0]["pro_name"]; ?></p>
 		        		<p><?php echo "Price: $ ".$item["price"]; ?></p>
-		        		<p>In stock usually within 2 weeks after order</p>
+		        		<p><?php echo $product_info[0]["pro_stock"];?></p>
 		        		<p id="<?php echo $item["code"]; ?>" >
 		        			<a href="mycart.php?action=remove&code=<?php echo $item["code"]; ?>" title="Remove from Cart" >Delete</a>
 		        		</p>
@@ -76,17 +76,19 @@
 		      		<td style="text-align:right;font-size:25px;padding: 20px 30px 20px 0;">
 			      		<p>Total : </p>
 			      		<p>Discount : </p>
+			      		<?php echo _t_subtotal;?> :
 		      		</td>
 		      		<td style="font-size:25px;padding: 20px 0 20px 0;">
-		      			<p>$ <?php echo $total; ?></p>
-		      			<p>5%</p>
+		      		<?php
+			    		if(isset($_SESSION['login_user'])=='Undefined'){
+			      			echo "<p>$ ".$total."</p><p>5 %</p>";
+			      			echo '$ '. $Subtotal;
+			      		}else{
+			      			echo "<p>$ ".$total."</p><p>0 %</p>";
+			      			echo "$ ".$total;
+			      		}
+		      		?>
 		      		</td>
-		      	</tr>
-		      	<tr>
-		      		<td></td>
-		      		<td></td>
-		      		<td style="text-align:right;font-size:25px;padding: 20px 30px 20px 0;"><?php echo _t_subtotal;?> :</td>
-		      		<td style="font-size:25px;padding: 20px 0 20px 0;"><?php echo $Subtotal;?></td>
 		      	</tr>
 		      	
 			</tbody>

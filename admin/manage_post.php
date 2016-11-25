@@ -15,6 +15,7 @@
         $deskh = $_POST['desKh'];
         $desen = $_POST['desEn'];
         $pinfor = $_POST['desInfo'];
+        $stock = $_POST['stock'];
         $date = date("Y/m/d H:i:s");
         $yes = 1;
         
@@ -33,7 +34,7 @@
                 $to = "../uploads/".$_FILES['image']['name'];
                 echo "Hello path ".$to;
                 move_uploaded_file($_FILES['image']['tmp_name'],$to);
-                $insert_product = Products::insert($pname,$pprice,$pcode,$pcat,$pimage,$deskh,$desen,$pinfor,$date);
+                $insert_product = Products::insert($pname,$pprice,$pcode,$pcat,$stock,$pimage,$deskh,$desen,$pinfor,$date);
                 $postSuceess="You have successfull post product. <br/><a href='listproducts.php'>Go to ListProduct</a>";
                 $yes=1;
             }
@@ -49,7 +50,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">
-                        Post Product
+                        Manage Product
                     </h1>
                     <ol class="breadcrumb">
                         <li>
@@ -83,7 +84,14 @@
                                 <p style="color:red;"><?php echo $codeErr;?></p>
                             </div>
                         </div>
-                        
+                        <div class="form-group">
+                            <div class="col-xs-10">
+                                <input name="stock" type="radio" value="In stock">
+                                <label>In stock</label><br/>
+                                <input name="stock" type="radio" value="In stock usually within 2 weeks after order">
+                                <label>In stock usually within 2 weeks after order</label>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <div class="col-xs-10">
                                 <label>Selects category</label>

@@ -12,6 +12,7 @@
         $pname = $row['pro_name'];
         $pprice = $row['pro_price'];
         $pimage = $row['pro_image'];
+        $stock = $row['pro_stock'];
         $deskh = $row['pro_descriptionKh'];
         $desen = $row['pro_descriptionEn'];
         $pinfor = $row['pro_information'];
@@ -79,7 +80,7 @@
                     <div class='desc1 span_3_of_2'>
                         <h3 class='m_3 p_title'><?php echo $pname;?><h3>
                         <p class='m_5'><?php echo _t_price; echo $pprice;?></p>
-                        <p class="m_5" style="color:#0097ff;">In stock</p><br/>
+                        <p class="m_5" style="color:#0097ff;"><?php echo $stock;?></p><br/>
                         <input type="number" class="qty" name="quantity" value="1"><br/><br/>
                         <a href="#toogle"><?php echo _t_readmore;?></a>
                         <p>

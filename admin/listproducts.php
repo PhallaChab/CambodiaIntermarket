@@ -43,6 +43,7 @@
                                     <th>Price</th>
                                     <th>Category</th>
                                     <th>Code</th>
+                                    <th>Stock</th>
                                     <th>English Description</th>
                                     <th>Khmer Description</th>
                                     <th>Information</th>
@@ -64,6 +65,7 @@
                                         <td><?php echo "$ ".$pro['pro_price'];?></td>
                                         <td><?php echo $pro['cat_name']?></td>
                                         <td><?php echo $pro['pro_code'];?></td>
+                                        <td><?php echo $pro['pro_stock'];?></td>
                                         <td><?php echo $pro['pro_descriptionEn'];?></td>
                                         <td><?php echo $pro['pro_descriptionKh'];?></td>
                                         <td><?php echo $pro['pro_information'];?></td>

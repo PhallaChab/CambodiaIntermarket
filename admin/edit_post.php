@@ -18,6 +18,7 @@
             $pname = $row['pro_name'];
             $pprice = $row['pro_price'];
             $pcode = $row['pro_code'];
+            $stock = $row['pro_stock'];
             $pimage = $row['pro_image'];
             $deskh = $row['pro_descriptionKh'];
             $desen = $row['pro_descriptionEn'];
@@ -35,22 +36,23 @@
         $pname = $_POST['name'];
         $pprice = $_POST['price'];
         $pcode = $_POST['code'];
+        $pstock = $_POST['stock'];
         $type = basename($_FILES['image']['type']);
         $pimage = basename($_FILES['image']['name']);
         $pcat = $_POST['cat'];
         $deskh = $_POST['desKh'];
         $desen = $_POST['desEn'];
         $pinfor = $_POST['desInfo'];
-
+        
         if($pimage){
             $to = "../uploads/".$_FILES['image']['name'];
             move_uploaded_file($_FILES['image']['tmp_name'],$to);
-            $edit_product = Products::edit($id,$pname,$pprice,$pcode,$pcat,$pimage,$deskh,$desen,$pinfor);
+            $edit_product = Products::edit($id,$pname,$pprice,$pcode,$pcat,$pstock,$pimage,$deskh,$desen,$pinfor);
             header("Location: listproducts.php");
         }else if($_SESSION['img']){
             $to = "../uploads/".$_FILES['image']['name'];
             move_uploaded_file($_FILES['image']['tmp_name'],$to);
-            $edit_product = Products::edit($id,$pname,$pprice,$pcode,$pcat,$_SESSION['img'],$deskh,$desen,$pinfor);
+            $edit_product = Products::edit($id,$pname,$pprice,$pcode,$pcat,$pstock,$_SESSION['img'],$deskh,$desen,$pinfor);
             header("Location: listproducts.php");
         }else{
             echo "no images";
@@ -100,7 +102,16 @@
                                 <input class="form-control" name="code" value="<?php echo $pcode; ?>">
                             </div>
                         </div>
-                        
+                        <div class="form-group">
+                            <div class="col-xs-10">
+                                <input name="stock" type="radio" value="In stock" 
+                                <?php if($stock=='In stock') {echo 'checked' ;} ?>>
+                                <label>In stock</label><br/>
+                                <input name="stock" type="radio" value="In stock usually within 2 weeks after order" 
+                                <?php if($stock=='In stock usually within 2 weeks after order') {echo 'checked' ;} ?>>
+                                <label>In stock usually within 2 weeks after order</label>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <div class="col-xs-10">
                                 <label>Selects category</label>

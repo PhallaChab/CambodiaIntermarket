@@ -34,11 +34,18 @@
         {
             $insert_users = User::insert($name,$company_name,$address,$email,$password,$phone,$role);
             //echo "You have been registered!";
-            header ("location:".URL."login.php");
+            $userID = User::getUserid($email);
+            $row = mysqli_fetch_array($userID);
+            if($row){
+                $userid = $row['userid'];
+            }
+            $mycart = User::insertcart($userid);
+            header ("location:".URL."views/login.php");
         }else{
             $regisErr = "Register not success!";
         }
 
+        
     }
 ?>
 <head>
@@ -55,8 +62,8 @@
             <p class="errorEmail"><?php echo $regisErr;?></p>
                 <div><input type='text' name='name' value='' placeholder='<?php echo _t_name;?>' required>
                 <span class="error">*</div>
-                <div><input type='text' name='company_name' value='' placeholder='<?php echo _t_companyname;?>' required><span class="error">*</div>
-                <div><input type='text' name='address' value='' placeholder='<?php echo _t_address;?>' required>
+                <div><input type='text' name='company_name' value='' placeholder='<?php echo _t_companyname;?>' ><span class="error">*</div>
+                <div><input type='text' name='address' value='' placeholder='<?php echo _t_address;?>' >
                 <span class="error">*</div>
             </div>
             <div class='col_1_of_2 span_1_of_2'>

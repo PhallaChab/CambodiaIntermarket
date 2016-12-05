@@ -1,6 +1,6 @@
 <?php
     include ("template/header.php");
-    include ("../models/products.php");
+    //include ("../models/products.php");
 ?>
 
 <div class="main">

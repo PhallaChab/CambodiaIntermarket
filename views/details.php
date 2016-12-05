@@ -1,10 +1,15 @@
 <?php
+    //$db = mysqli_connect("localhost","cambodiaintermarket_com","nDxfgjvd","cambodiaintermarket_com");
+    //mysqli_query ( $db,"set character_set_results='utf8'" );
+
     $db = mysqli_connect("localhost","root","","cambointermarket");
     mysqli_query ( $db,"set character_set_results='utf8'" );
 
     include ('template/header.php');
-    include ('../models/products.php');
-
+    //include ('../models/products.php');
+    require_once("../include/dbcontroller.php");
+    $db_handle = new DBController();
+    
     $id = $_GET['id'];
     $product =  Product::getProductImage($id);
     $row = mysqli_fetch_array($product);
@@ -17,6 +22,27 @@
         $desen = $row['pro_descriptionEn'];
         $pinfor = $row['pro_information'];
     }
+
+    if(isset($_SESSION['login_user'])=='Undefined'){
+        if(!empty($_GET["action"])) {
+            switch($_GET["action"]) {
+                case "add":
+                    if(!empty($_POST["quantity"])) {
+                        $quantity = $_POST["quantity"];
+                        $userid = $_SESSION['uid'];
+                        $cart = Product::getcartID($userid);
+                        $row = mysqli_fetch_array($cart);
+                        if($row){
+                            $cartid = $row['cart_id'];
+                        }
+                        $insertPro_cart = Product::insertpro_cart($cartid,$id,$quantity);
+                        
+                    }
+                break;
+            }
+        }
+    }
+
     $select = "select * from products where pro_id = ".$id;
     $query = mysqli_query($db,$select);
     $numrow = mysqli_num_rows($query);
@@ -80,7 +106,7 @@
                     <div class='desc1 span_3_of_2'>
                         <h3 class='m_3 p_title'><?php echo $pname;?><h3>
                         <p class='m_5'><?php echo _t_price; echo $pprice;?></p>
-                        <p class="m_5" style="color:#0097ff;"><?php echo $stock;?></p><br/>
+                        <p class="m_5 stockanimation"><?php echo $stock;?></p><br/>
                         <input type="number" class="qty" name="quantity" value="1"><br/><br/>
                         <a href="#toogle"><?php echo _t_readmore;?></a>
                         <p>

@@ -52,7 +52,18 @@ div.animation{
     from {left: 0px;}
     to {left: 650px;}
 }
+p.stockanimation {
+    width: auto;
+    height: 35px;
+    color: blue;
+    animation: mystock 1s infinite;
+    margin-top:10px;
+}
 
+@keyframes mystock {
+    from {color: blue;}
+    to {color: red;}
+}
 tr th{
 	font-size: 20px;
 }
@@ -286,7 +297,7 @@ div.showhim{
 }
 .myheart{
 	float: right;
-    margin-top: -144px;
+    margin-top: -174px;
     margin-right: 300px;
     border: none;
     background: none;

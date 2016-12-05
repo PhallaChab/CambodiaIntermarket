@@ -41,7 +41,6 @@ div.animation{
     animation: mymove 20s infinite;
     top: 68px;
 }
-
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes mymove {
     from {left: 0px;}
@@ -53,6 +52,18 @@ div.animation{
     to {left: 650px;}
 }
 
+p.stockanimation {
+    width: auto;
+    height: 35px;
+    color: blue;
+    animation: mystock 1s infinite;
+    margin-top:10px;
+}
+
+@keyframes mystock {
+    100%  {color: blue;}
+    50% {color: red;}
+}
 .f-list{
 	margin-top:5px;
 }
@@ -278,7 +289,7 @@ div.showhim{
 }
 .myheart{
 	float: right;
-    margin-top: -200px;
+    margin-top: -157px;
     margin-right: 225px;
     border: none;
     background: none;

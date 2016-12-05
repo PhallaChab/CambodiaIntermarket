@@ -1,6 +1,6 @@
 <?php
     include ("template/header.php");
-    include ("../models/products.php");
+    //include ("../models/products.php");
 
     require_once("../include/dbcontroller.php");
 	$db_handle = new DBController();

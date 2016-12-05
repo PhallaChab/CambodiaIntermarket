@@ -4,6 +4,11 @@
 	define("DB_PASSWORD", "");
 	define("DB_DATABASE", "cambointermarket");
 	
+	// define("DB_SERVER", "localhost");
+	// define("DB_USERNAME", "cambodiaintermarket_com");
+	// define("DB_PASSWORD", "nDxfgjvd");
+	// define("DB_DATABASE", "cambodiaintermarket_com");
+	
 	// can run all query select
 	function runQuery($sql){
 		$con = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);

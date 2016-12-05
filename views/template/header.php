@@ -2,7 +2,7 @@
 	include ('../lang/define_lang.php');
 	include ("../config/config.php");
 	include ("seo.php");
-	// include ("models/products.php");
+	include ("../models/products.php");
 
 	//add to cart
     require_once("../include/dbcontroller.php");
@@ -58,7 +58,23 @@
             break;
         }
     }
-
+    if(isset($_SESSION['login_user'])=='Undefined'){
+    	$uid = $_SESSION['uid'];
+		$userID = Product::getIdCart($uid);
+	    $row = mysqli_fetch_array($userID);
+	    if($row){
+	        $cartid = $row['cart_id'];
+	    }
+	    $mycountcart = Product::countCart($cartid);
+	    $count = mysqli_fetch_array($mycountcart);
+	    $countcart=0;
+	    if($count){
+	    	$countcart = $count[0];
+	    }
+    }else{
+    	echo "";
+    }
+    
 ?>
 <!DOCTYPE html>
 <html>
@@ -126,28 +142,38 @@
 			</ul>
 		</div>
 		<?php
-	        $session_items = 0;
+			$session_items = 0;
 	        $session_like = 0;
 	        if(!empty($_SESSION["cart_item"])){
 	            $session_items = count($_SESSION["cart_item"]);
 	        }
-
 	        if(!empty($_SESSION["like_item"])){
 	            $session_like = count($_SESSION["like_item"]);
 	        } 
 	    ?>
 		<div class="col-md-4 col-xs-12 threeicon">
 			<div class="col-md-4 col-xs-4 styleicon">
-				<a href="mycart.php">
-		    		<img src="resources/images/cart.png" class="icon">
-		    		<span style="color:#fff;" class="divItems"><?php echo $session_items; ?></span>
-		    		<p class="texticon"><?php echo _t_basket;?></p>
-		    	</a>
+			<?php
+			    if(isset($_SESSION['login_user'])=='Undefined'){
+					echo "<a href='mycart.php'>
+			    		<img src='resources/images/cart.png' class='icon'>
+			    		<span style='color:#fff;' class='divItems'>".$countcart."</span>
+			    		<p class='texticon'>"._t_basket."</p>
+			    	</a>";
+			    }else{
+			    	echo "<a href='mycart.php'>
+			    		<img src='resources/images/cart.png' class='icon'>
+			    		<span style='color:#fff;' class='divItems'>".$session_items."</span>
+			    		<p class='texticon'>"._t_basket."</p>
+			    	</a>";
+			    }
+			?>
 			</div>
 			<div class="col-md-4 col-xs-4 styleicon">
 				<a href="mywishlist.php">
 		    		<img src="resources/images/heart.png" class="icon">
-		    		<span class="divItems" style="color:#fff;"><?php echo $session_like; ?></span>
+		    		<span class="divItems" style="color:#fff;">
+		    		<?php echo $session_like; ?></span>
 		    		<p class="texticon"><?php echo _t_wishlist;?></p>
 		    	</a>
 			</div>

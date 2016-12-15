@@ -16,9 +16,14 @@
 			</script>
 		    <div class='slider-wrapper theme-default'>
 		      	<div id='slider' class='nivoSlider'>
-		            <img src='resources/images/bannerh.jpg' alt='' />
-		           	<img src='resources/images/banner2.png' alt='' />
-		            <img src='resources/images/bannerw.jpg' alt='' />
+		      		<?php 
+		      			$ShowSlide=Product::showslide();
+		      			foreach ($ShowSlide as $show){
+		      				echo "
+		      					<img src = '../uploads/".$show['image']."'/>
+		      				";
+		      			}
+		      		?>
 
 		      	</div>
 		    </div>

@@ -2353,6 +2353,9 @@ p.m_text{
 	positon: relative;
 }
 /*** Navigation ***/
+.nbs-flexisel-nav-right, .nbs-flexisel-nav-left{
+	top: 145px !important;
+}
 .nbs-flexisel-nav-left, .nbs-flexisel-nav-right {
 	width:28px;
 	height:29px;
@@ -2811,6 +2814,20 @@ ul.delivery-list li a:hover{
 	.wrap{
 		width:90%;
 	}
+	.heartdetail {
+	    margin-top: 21px;
+	    left: 40px;
+	}
+	.displayresult img{
+		height: 325px;
+	}
+	div.animation{
+		top:138px;
+	}
+	@keyframes mymove {
+	    from {left: 0px;}
+	    to {left: 200px;}
+	}
 	.threeicon{
 		margin: 0 0 0 -44px;
 	}
@@ -2937,6 +2954,20 @@ ul.delivery-list li a:hover{
 @media (max-width:768px){
 	.wrap{
 		width:97%;
+	}
+	.heartdetail {
+	    margin-top: 21px;
+	    left: 40px;
+	}
+	.displayresult img{
+		height: 325px;
+	}
+	div.animation{
+		top:138px;
+	}
+	@keyframes mymove {
+	    from {left: 0px;}
+	    to {left: 200px;}
 	}
 	.threeicon{
 		margin: 0 0 0 -44px;
@@ -3147,6 +3178,20 @@ ul.delivery-list li a:hover{
 	#products .pagination li a {
 		width:89px;
 	}
+	.displayresult img{
+		height: 325px;
+	}
+	.heartdetail {
+	    margin-top: 21px;
+	    left: 40px;
+	}
+	div.animation{
+		top:138px;
+	}
+	@keyframes mymove {
+	    from {left: 0px;}
+	    to {left: 200px;}
+	}
 	.loginheader{
 		float: left;
 	}
@@ -3341,6 +3386,20 @@ ul.delivery-list li a:hover{
 @media (max-width:480px){
 	#products .pagination li a {
 		width:89px;
+	}
+	.displayresult img{
+		height: 325px;
+	}
+	.heartdetail {
+	    margin-top: 21px;
+	    left: 40px;
+	}
+	div.animation{
+		top:138px;
+	}
+	@keyframes mymove {
+	    from {left: 0px;}
+	    to {left: 200px;}
 	}
 	.loginheader{
 		float: left;
@@ -3564,6 +3623,20 @@ ul.delivery-list li a:hover{
 @media (max-width:320px){
 	#products .pagination li a {
 		width:89px;
+	}
+	div.animation{
+		top:138px;
+	}
+	.heartdetail {
+	    margin-top: 21px;
+	    left: 100px;
+	}
+	.displayresult img{
+		height: 325px;
+	}
+	@keyframes mymove {
+	    from {left: 0px;}
+	    to {left: 200px;}
 	}
 	.loginheader{
 		float: left;

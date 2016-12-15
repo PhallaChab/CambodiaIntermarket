@@ -223,8 +223,7 @@
 			    <div class="col-md-4">
 				    <div class="row">
 				    	<a href="index.php">
-							<img src="resources/images/LOGO-01.png" alt="" style="width: 260px; height: 80px; margin-top: -12px;" />
-							<!-- <p class="logotext">Cambodia Intermarket</p> -->
+							<img src="resources/images/logo.png" alt="" style="width: 200px;height: 125px;margin-top: -15px;" />
 						</a>
 				    </div>
 			    </div>
@@ -258,7 +257,7 @@
 	 		<div class="clear"></div>
 
 	 		<!-- desktop menu -->
-		 	<div class="">
+		 	<div class="hidden-xs">
 				<div class="menu">
 		            <ul class="megamenu skyblue">
 		            	<li class="dropdown1">
@@ -320,28 +319,28 @@
 					</ul>
 				</div>
 			</div>
-
-			<!-- mobile menu -->
-			<!-- <div class="hidden-lg hidden-md ">
+			<div class="hidden-lg hidden-md hidden-sm">
 				<div class="menu">
 		            <ul class="megamenu skyblue">
 		            	<li class="dropdown1">
-						    <a href="" class="dropbtn"><?php echo _t_woman;?></a>
+						    <a href="#" class="dropbtn"><?php echo _t_woman;?></a>
 						    <div class="dropdown-content">
 							    <ul class="col-md-12 submenu">
 								    <li>
 								    	<a href="w_new.php"><?php echo _t_new;?></a>
-								      	<a href="cosmetic.php""><?php echo _t_cosmetic;?></a>
-								      	<a href="w_perfume.php""><?php echo _t_perfume;?></a>
-								      	<a href="handbag.php""><?php echo _t_bag;?></a>
+								      	<a href="cosmetic.php"><?php echo _t_cosmetic;?></a>
+								      	<a href="w_perfume.php"><?php echo _t_perfume;?></a>
+								      	<a href="handbag.php"><?php echo _t_bag;?></a>
 								      	<a href="glassess.php"><?php echo _t_glass;?></a>
 								      	<a href="w_watch.php"><?php echo _t_watch;?></a>
+								      	<a href="bag.php"><?php echo _t_backpack;?></a>
+
 								    </li>
 							    </ul>
 						    </div>
 						</li>
 						<li class="dropdown1">
-							<a class="dropbtn" href=""><?php echo _t_man;?></a>
+							<a class="dropbtn" href="#"><?php echo _t_man;?></a>
 							<div class="dropdown-content">
 							    <ul class="col-md-12 submenu">
 								    <li>
@@ -350,12 +349,20 @@
 								      	<a href="glassess.php"><?php echo _t_glass;?></a>
 								      	<a href="m_watch.php"><?php echo _t_watch;?></a>
 								      	<a href="m_perfume.php"><?php echo _t_perfume;?></a>
+								      	<a href="bag.php"><?php echo _t_backpack;?></a>
 								    </li>
 							    </ul>
 						    </div>
 						</li>	
 						<li class="dropdown1">
 							<a class="dropbtn" href="#"><?php echo _t_child;?></a>
+							<div class="dropdown-content">
+							    <ul class="col-md-12 submenu">
+								    <li>
+								    	<a href="bag.php"><?php echo _t_backpack;?></a>
+								    </li>
+							    </ul>
+						    </div>
 						</li>
 						<li class="dropdown1">
 							<a class="dropbtn" href="#"><?php echo _t_house;?></a>
@@ -373,9 +380,7 @@
 						</li>
 					</ul>
 				</div>
-			</div> -->
+			</div>
      <div class="clear"></div>
      </div>
 	</div>
-
-

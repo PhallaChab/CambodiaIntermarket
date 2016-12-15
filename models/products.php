@@ -102,6 +102,18 @@
         public static function countCart($cartid){
             return runQuery("SELECT count(*) from cartproducts where cart_id =".$cartid);
         }
+        public static function showslide(){
+            $sql = "SELECT * from slides ORDER BY date_add DESC LIMIT 4";
+            return runQuery($sql);
+        }
+        //menu dinamic
+        public static function getMainmenu(){
+            return runQuery("SELECT * FROM main_menu");
+        }
+        public static function getSubmenu($mainid){
+            $sql = "SELECT * FROM sub_menu WHERE m_menu_id=".$mainid;
+            return runQuery($sql);
+        }
     }
 ?>
 <!-- SELECT products.pro_name from products 

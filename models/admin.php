@@ -40,4 +40,49 @@ class Products {
             }
         }
     }
+    public static function insertslide($description,$image,$date){
+        $sql = "INSERT INTO slides (description,image,date_add) values ('{$description}','{$image}','{$date}')";
+        return runNonQuery($sql);
+    }
+    public static function delectslide($id){
+        $sql = "DELETE from slides where id=".$id;
+        return runQuery($sql);
+    }
+    public static function editslide($id,$img, $descrip){
+        $sql = "UPDATE slides SET image ='$img',description = '$descrip' where id='$id'";
+        return runNonQuery($sql);
+    }
+    public static function getSlide(){
+        $sql = "SELECT * from slides ORDER BY date_add DESC";
+        return runQuery($sql);
+    }
+    public static function getSlideid($id){
+        $sql = "SELECT * from slides where id=".$id;
+        return runQuery($sql);
+    }
+    // manage menu
+    public static function insertMenu($menu_name,$menu_kh,$menu_link){
+        $sql = "INSERT INTO main_menu(m_menu_name,menu_kh,m_menu_link) 
+                VALUES('$menu_name','$menu_kh','$menu_link')";
+        return runQuery($sql);
+    }
+    public static function insertSubMenu($parent,$proname,$menu_link,$submenu_kh){
+        $sql = "INSERT INTO sub_menu(m_menu_id,s_menu_name,s_menu_link,submenu_kh) 
+                VALUES('$parent','$proname','$menu_link','$submenu_kh')";
+        return runQuery($sql);
+    }
+    public static function getMainmenu(){
+        return runQuery("SELECT * FROM main_menu");
+    }
+    public static function getSubmenu($mainid){
+        $sql = "SELECT * FROM sub_menu WHERE m_menu_id=".$mainid;
+        return runQuery($sql);
+    }
+    public static function delectMm($mid){
+        return runNonQuery("DELETE from main_menu where m_menu_id=".$mid);
+    }
+    public static function delectSm($sid){
+        return runNonQuery("DELETE from sub_menu where s_menu_id=".$sid);
+    }
+
 }

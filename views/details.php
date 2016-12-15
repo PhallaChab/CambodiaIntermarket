@@ -47,7 +47,7 @@
     $query = mysqli_query($db,$select);
     $numrow = mysqli_num_rows($query);
     if($numrow>0){
-        while($row = $query->fetch_object()){;
+        while($row = $query->fetch_object()){
             if($_SESSION['lang']==1){
                 $disc=$row->pro_descriptionKh;
             }else if($_SESSION['lang']==2){

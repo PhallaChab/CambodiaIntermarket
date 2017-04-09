@@ -1,4 +1,3 @@
-
 	<div class='top-border'> </div>
 	<div class='border'>
       	<div class="slider_container">

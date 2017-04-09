@@ -57,4 +57,5 @@
 	define("_t_countinue", "Continue Shopping");
 	define("_t_backpack","BackPack");
 	define("_t_shopping","Shopping Cart");
+	define("_t_sportbag","Sport Bag");
 ?>

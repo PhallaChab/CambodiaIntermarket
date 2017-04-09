@@ -32,16 +32,16 @@
 </style>
 <div class="leftmenu">
     <ul class="nav-stacked">
-        <li class="maincat"><a href="woman.php">Woman</a></li>
+        <li class="maincat"><a href="#">Woman</a></li>
         <li><a href="cosmetic.php">Cosmetic</a></li>
         <li><a href="w_perfume.php">Perfume</a></li>
         <li><a href="handbag.php">Hand Bag</a></li>
         <li><a href="glassess.php">Sunglass</a></li>
         <li><a href="w_watch">Watch</a></li>
         <li><a href="bag.php">BackPack</a></li>
-        <li class="maincat"><a href="man.php">Man</a></li>
+        <li class="maincat"><a href="#">Man</a></li>
         <li><a href="belt.php">Belt</a></li>
-        <li><a href="m_watch.php">Watch</a></li>
+        <li><a href="m_watch">Watch</a></li>
         <li><a href="glassess.php">Sun Glasses</a></li>
         <li><a href="m_perfume.php">Perfume</a></li>
         <li><a href="bag.php">BackPack</a></li>

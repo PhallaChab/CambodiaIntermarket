@@ -1,6 +1,6 @@
 <?php
     include ("template/header.php");
-    //include ("models/products.php");
+    include ("models/products.php");
 ?>
     <div class="main">
         <div class="wrap">
@@ -18,7 +18,7 @@
                     <?php
                         include ("template/pagination.php");
                     ?>
-                    <div class="hidden-xs">
+                    <div class="">
                     <?php
                         $product =  Product::getMPerfume();
                         foreach ($product as $pro){
@@ -42,69 +42,6 @@
                             }
                         ?>
                         
-                    </div>
-                    <div class="clients hidden-lg hidden-md hidden-ms">
-                        <ul id="flexiselDemo3">
-                        <?php
-                            $product =  Product::getMPerfume();
-                            foreach ($product as $pro){
-                                echo "<li>
-                                    <a href='details.php?code=".$pro['pro_code']."&id=".$pro['pro_id']."''>
-                                    <img src='../uploads/".$pro['pro_image']."'/>
-                                    <p>".$pro['pro_name']."</p>
-                                    <p>$".$pro['pro_price']."</p>
-                                    </a>
-                                </li>";
-                            }
-                        ?>
-                        </ul>
-                        <script type="text/javascript">
-                        $(window).load(function() {
-                            $("#flexiselDemo1").flexisel();
-                            $("#flexiselDemo2").flexisel({
-                                enableResponsiveBreakpoints: true,
-                                responsiveBreakpoints: {
-                                    portrait: {
-                                        changePoint: 480,
-                                        visibleItems: 1
-                                    },
-                                    landscape: {
-                                        changePoint: 640,
-                                        visibleItems: 2
-                                    },
-                                    tablet: {
-                                        changePoint: 768,
-                                        visibleItems: 3
-                                    }
-                                }
-                            });
-
-                            $("#flexiselDemo3").flexisel({
-                                visibleItems: 5,
-                                animationSpeed: 1000,
-                                autoPlay: false,
-                                autoPlaySpeed: 3000,
-                                pauseOnHover: true,
-                                enableResponsiveBreakpoints: true,
-                                responsiveBreakpoints: {
-                                    portrait: {
-                                        changePoint: 480,
-                                        visibleItems: 1
-                                    },
-                                    landscape: {
-                                        changePoint: 640,
-                                        visibleItems: 2
-                                    },
-                                    tablet: {
-                                        changePoint: 768,
-                                        visibleItems: 3
-                                    }
-                                }
-                            });
-
-                        });
-                        </script>
-                        <script type="text/javascript" src="js/jquery.flexisel.js"></script>
                     </div>
                 </div>
             </div>

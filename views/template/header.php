@@ -2,7 +2,7 @@
 	include ('../lang/define_lang.php');
 	include ("../config/config.php");
 	include ("seo.php");
-	include ("../models/products.php");
+	// include ("models/products.php");
 
 	//add to cart
     require_once("../include/dbcontroller.php");
@@ -58,23 +58,7 @@
             break;
         }
     }
-    if(isset($_SESSION['login_user'])=='Undefined'){
-    	$uid = $_SESSION['uid'];
-		$userID = Product::getIdCart($uid);
-	    $row = mysqli_fetch_array($userID);
-	    if($row){
-	        $cartid = $row['cart_id'];
-	    }
-	    $mycountcart = Product::countCart($cartid);
-	    $count = mysqli_fetch_array($mycountcart);
-	    $countcart=0;
-	    if($count){
-	    	$countcart = $count[0];
-	    }
-    }else{
-    	echo "";
-    }
-    
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -95,7 +79,6 @@
 	<link rel="icon" type="image/gif/png" href="resources/images/logo1.jpg">
 	<meta name="google-site-verification" content="Ry4SC9lqacxjYGDI_lYE9LC_Kg6POipip5-QEJCG4ZA" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 	<link href="resources/css/bootstrap.min.css" rel="stylesheet">
 	<?php
@@ -129,8 +112,8 @@
 		<div class="col-md-4 col-xs-12">
 			<ul class="list-inline lang">
 				<li>
-					<a href="..\lang/switch_lang.php?lang=2" style="color:#fff; font-family:'Bodoni MT';font-size:18px;">English |</a>
-					<a href="..\lang/switch_lang.php?lang=1">ភាសាខ្មែរ</a>
+					<!-- <a href="..\lang/switch_lang.php?lang=2" style="color:#fff; font-family:'Bodoni MT';font-size:18px;">English |</a>
+					<a href="..\lang/switch_lang.php?lang=1">ភាសាខ្មែរ</a> -->
 				</li>
 				<?php
 			    if(isset($_SESSION['login_user'])=='Undefined'){
@@ -142,38 +125,28 @@
 			</ul>
 		</div>
 		<?php
-			$session_items = 0;
+	        $session_items = 0;
 	        $session_like = 0;
 	        if(!empty($_SESSION["cart_item"])){
 	            $session_items = count($_SESSION["cart_item"]);
 	        }
+
 	        if(!empty($_SESSION["like_item"])){
 	            $session_like = count($_SESSION["like_item"]);
 	        } 
 	    ?>
 		<div class="col-md-4 col-xs-12 threeicon">
 			<div class="col-md-4 col-xs-4 styleicon">
-			<?php
-			    if(isset($_SESSION['login_user'])=='Undefined'){
-					echo "<a href='mycart.php'>
-			    		<img src='resources/images/cart.png' class='icon'>
-			    		<span style='color:#fff;' class='divItems'>".$countcart."</span>
-			    		<p class='texticon'>"._t_basket."</p>
-			    	</a>";
-			    }else{
-			    	echo "<a href='mycart.php'>
-			    		<img src='resources/images/cart.png' class='icon'>
-			    		<span style='color:#fff;' class='divItems'>".$session_items."</span>
-			    		<p class='texticon'>"._t_basket."</p>
-			    	</a>";
-			    }
-			?>
+				<a href="mycart.php">
+		    		<img src="resources/images/cart.png" class="icon">
+		    		<span style="color:#fff;" class="divItems"><?php echo $session_items; ?></span>
+		    		<p class="texticon"><?php echo _t_basket;?></p>
+		    	</a>
 			</div>
 			<div class="col-md-4 col-xs-4 styleicon">
 				<a href="mywishlist.php">
 		    		<img src="resources/images/heart.png" class="icon">
-		    		<span class="divItems" style="color:#fff;">
-		    		<?php echo $session_like; ?></span>
+		    		<span class="divItems" style="color:#fff;"><?php echo $session_like; ?></span>
 		    		<p class="texticon"><?php echo _t_wishlist;?></p>
 		    	</a>
 			</div>
@@ -223,7 +196,8 @@
 			    <div class="col-md-4">
 				    <div class="row">
 				    	<a href="index.php">
-							<img src="resources/images/logo.png" alt="" style="width: 200px;height: 125px;margin-top: -15px;" />
+							<img src="resources/images/LOGO-01.png" alt="" style="width: 260px; height: 80px; margin-top: -12px;" />
+							<!-- <p class="logotext">Cambodia Intermarket</p> -->
 						</a>
 				    </div>
 			    </div>
@@ -257,7 +231,7 @@
 	 		<div class="clear"></div>
 
 	 		<!-- desktop menu -->
-		 	<div class="hidden-xs">
+		 	<div class="">
 				<div class="menu">
 		            <ul class="megamenu skyblue">
 		            	<li class="dropdown1">
@@ -288,6 +262,7 @@
 								      	<a href="m_watch.php"><?php echo _t_watch;?></a>
 								      	<a href="m_perfume.php"><?php echo _t_perfume;?></a>
 								      	<a href="bag.php"><?php echo _t_backpack;?></a>
+								      	<a href="sportbag.php"><?php echo _t_sportbag;?></a>
 								    </li>
 							    </ul>
 						    </div>
@@ -319,28 +294,28 @@
 					</ul>
 				</div>
 			</div>
-			<div class="hidden-lg hidden-md hidden-sm">
+
+			<!-- mobile menu -->
+			<!-- <div class="hidden-lg hidden-md ">
 				<div class="menu">
 		            <ul class="megamenu skyblue">
 		            	<li class="dropdown1">
-						    <a href="#" class="dropbtn"><?php echo _t_woman;?></a>
+						    <a href="" class="dropbtn"><?php echo _t_woman;?></a>
 						    <div class="dropdown-content">
 							    <ul class="col-md-12 submenu">
 								    <li>
 								    	<a href="w_new.php"><?php echo _t_new;?></a>
-								      	<a href="cosmetic.php"><?php echo _t_cosmetic;?></a>
-								      	<a href="w_perfume.php"><?php echo _t_perfume;?></a>
-								      	<a href="handbag.php"><?php echo _t_bag;?></a>
+								      	<a href="cosmetic.php""><?php echo _t_cosmetic;?></a>
+								      	<a href="w_perfume.php""><?php echo _t_perfume;?></a>
+								      	<a href="handbag.php""><?php echo _t_bag;?></a>
 								      	<a href="glassess.php"><?php echo _t_glass;?></a>
 								      	<a href="w_watch.php"><?php echo _t_watch;?></a>
-								      	<a href="bag.php"><?php echo _t_backpack;?></a>
-
 								    </li>
 							    </ul>
 						    </div>
 						</li>
 						<li class="dropdown1">
-							<a class="dropbtn" href="#"><?php echo _t_man;?></a>
+							<a class="dropbtn" href=""><?php echo _t_man;?></a>
 							<div class="dropdown-content">
 							    <ul class="col-md-12 submenu">
 								    <li>
@@ -349,20 +324,12 @@
 								      	<a href="glassess.php"><?php echo _t_glass;?></a>
 								      	<a href="m_watch.php"><?php echo _t_watch;?></a>
 								      	<a href="m_perfume.php"><?php echo _t_perfume;?></a>
-								      	<a href="bag.php"><?php echo _t_backpack;?></a>
 								    </li>
 							    </ul>
 						    </div>
 						</li>	
 						<li class="dropdown1">
 							<a class="dropbtn" href="#"><?php echo _t_child;?></a>
-							<div class="dropdown-content">
-							    <ul class="col-md-12 submenu">
-								    <li>
-								    	<a href="bag.php"><?php echo _t_backpack;?></a>
-								    </li>
-							    </ul>
-						    </div>
 						</li>
 						<li class="dropdown1">
 							<a class="dropbtn" href="#"><?php echo _t_house;?></a>
@@ -380,7 +347,9 @@
 						</li>
 					</ul>
 				</div>
-			</div>
+			</div> -->
      <div class="clear"></div>
      </div>
 	</div>
+
+

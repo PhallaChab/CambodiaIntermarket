@@ -1,5 +1,5 @@
 <?php
-    //include ('../include/functions.php');
+    include ('../include/functions.php');
   // User class is used instead of above two user functions
     class User {
         public static function login($email,$password){
@@ -32,13 +32,6 @@
         }
         public static function getUser(){
             return runQuery("SELECT * from users");
-        }
-        public static function getUserid($email){
-            return runQuery("SELECT * from users where email = '".$email."'");
-        }
-        public static function insertcart($userid){
-            $sql = "INSERT INTO carts (userid) values ('{$userid}')";
-            return runNonQuery($sql);
         }
     }
 ?>

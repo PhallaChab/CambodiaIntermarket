@@ -52,18 +52,7 @@ div.animation{
     from {left: 0px;}
     to {left: 650px;}
 }
-p.stockanimation {
-    width: auto;
-    height: 35px;
-    color: blue;
-    animation: mystock 1s infinite;
-    margin-top:10px;
-}
 
-@keyframes mystock {
-    from {color: blue;}
-    to {color: red;}
-}
 tr th{
 	font-size: 20px;
 }
@@ -297,7 +286,7 @@ div.showhim{
 }
 .myheart{
 	float: right;
-    margin-top: -174px;
+    margin-top: -144px;
     margin-right: 300px;
     border: none;
     background: none;
@@ -2366,9 +2355,6 @@ p.m_text{
 	cursor: pointer;
 	z-index: 100;
 }
-.nbs-flexisel-nav-right, .nbs-flexisel-nav-left{
-	top: 145px !important;
-}
 .nbs-flexisel-nav-left {
 	left: 0px;
 	background: url(../images/img-sprite.png) no-repeat -23px -217px;
@@ -2811,13 +2797,6 @@ ul.delivery-list li a:hover{
 	.wrap{
 		width:90%;
 	}
-	div.animation{
-		top:152px;
-	}
-	@keyframes mymove {
-	    from {left: 0px;}
-	    to {left: 200px;}
-	}
 	.loginheader{
 		float: left;
 	}
@@ -2952,13 +2931,6 @@ ul.delivery-list li a:hover{
 @media (max-width:768px){
 	.wrap{
 		width:97%;
-	}
-	div.animation{
-		top:152px;
-	}
-	@keyframes mymove {
-	    from {left: 0px;}
-	    to {left: 200px;}
 	}
 	.loginheader{
 		float: left;
@@ -3175,13 +3147,6 @@ ul.delivery-list li a:hover{
 	#products .pagination li a {
 		width:89px;
 	}
-	div.animation{
-		top:152px;
-	}
-	@keyframes mymove {
-	    from {left: 0px;}
-	    to {left: 200px;}
-	}
 	.loginheader{
 		float: left;
 	}
@@ -3380,13 +3345,6 @@ ul.delivery-list li a:hover{
 @media (max-width:480px){
 	#products .pagination li a {
 		width:89px;
-	}
-	div.animation{
-		top:152px;
-	}
-	@keyframes mymove {
-	    from {left: 0px;}
-	    to {left: 200px;}
 	}
 	.loginheader{
 		float: left;
@@ -3614,13 +3572,6 @@ ul.delivery-list li a:hover{
 @media (max-width:320px){
 	#products .pagination li a {
 		width:89px;
-	}
-	div.animation{
-		top:152px;
-	}
-	@keyframes mymove {
-	    from {left: 0px;}
-	    to {left: 200px;}
 	}
 	.loginheader{
 		float: left;

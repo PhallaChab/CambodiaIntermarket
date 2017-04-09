@@ -59,4 +59,5 @@
 	define("_t_countinue", "បន្តការទិញទំនិញ");
 	define("_t_backpack","កាតាបស្ពាយពីក្រោយ");
 	define("_t_shopping", "ឥវ៉ាន់ដែលបានកម្មង");
+	define("_t_sportbag","កាតាបកីឡា");
 ?>	

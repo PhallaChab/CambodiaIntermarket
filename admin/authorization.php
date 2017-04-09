@@ -1,6 +1,10 @@
 <?php 
+    // session_start();
+    // include ("../config/config.php");
+    if(!isset($_SESSION)){
     session_start();
     include ("../config/config.php");
+    }
     
     $user = $_SESSION['login_user'];
     $role = $_SESSION['rerole'];

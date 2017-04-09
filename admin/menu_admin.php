@@ -50,19 +50,16 @@
                 <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
             </li>
             <li>
-                <a href="manage_menu.php"><i class="fa fa-fw fa-edit"></i> Manage Menu</a>
-            </li>
-            <li>
-                <a href="manage_category.php"><i class="fa fa-fw fa-edit"></i> Manage Category</a>
-            </li>
-            <li>
                 <a href="manage_post.php"><i class="fa fa-fw fa-bar-chart-o"></i> Manage Product</a>
             </li>
             <li>
                 <a href="listproducts.php"><i class="fa fa-fw fa-table"></i> List Products</a>
             </li>
             <li>
-                <a href="manage_slide.php"><i class="fa fa-fw fa-table"></i> Manage SlideShow</a>
+                <a href="manage_category.php"><i class="fa fa-fw fa-edit"></i> Manage Category</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-fw fa-desktop"></i>List Chat</a>
             </li>
         </ul>
     </div>
